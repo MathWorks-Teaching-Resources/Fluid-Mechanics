@@ -73,48 +73,56 @@
 %         <th scope="row">
 %             <a name="script1"; href="matlab:edit fluidDefinition.mlx;"><b>fluidDefinition.mlx</b> 
 %              <br>
-%             <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
+%             <img src = "./Images/waterDrop.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
 %         </th>              
 %         <td>
 %             <ul style="margin-top:5px; margin-bottom:10px">
-%                 <li> Defintion of fluid (liquid or gas). </li>
-%                 <li> The different scale in actions. </li>
-%                 <li> Eulerian vs. Lagrangian. </li>
-%                 <li> Thermodynamic property </li>
-%                 <li> Reynolds transport theorem </li>
+%                 <li> The concept of fluid parcels. </li>
+%                 <li> Lagrangian and Eulerian specification of flow. </li>
+%                 <li> Material derivative. </li>
+%                 <li> Reynolds transport theorem. </li>
 %             </ul>
 %         </td>
 %     </tr>
 %     <tr>
 %         <th scope="row">
-%             <a name="script1"; href="matlab:edit fluidDefinition.mlx;"><b>fluidDefinition.mlx</b> 
+%             <a name="script1"; href="matlab:edit fluidDefinition.mlx;"><b>fluidForces.mlx</b> 
 %              <br>
-%             <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
+%             <img src = "./Images/ship.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
 %         </th>              
 %         <td>
+%            <strong>Statics</strong>
 %             <ul style="margin-top:5px; margin-bottom:10px">
-%                 <li> Info script 2. </li>
+%                 <li> Pressure forces. </li>
+%                 <li> Buoyancy. </li>
+%                 <li> Manometers. </li>
+%             </ul>
+%             <strong>Dynamics</strong>
+%             <ul style="margin-top:5px; margin-bottom:10px">
+%                 <li> Control volume method. </li>
 %             </ul>
 %         </td>
 %     </tr>
 %     <tr>
 %         <th scope="row">
-%             <a name="script1"; href="matlab:edit fluidDefinition.mlx;"><b>fluidDefinition.mlx</b> 
+%             <a name="script1"; href="matlab:edit fluidAtWork.mlx;"><b>fluidAtWork.mlx</b> 
 %              <br>
-%             <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
+%              <img src = "./Images/windTurbine.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
 %         </th>              
 %         <td>
 %             <ul style="margin-top:5px; margin-bottom:10px">
-%                 <li> Info script 3. </li>
+%                 <li> Bernoulli equation. </li>
+%                 <li> Flow in a pipe. </li>
+%                 <li> Flow through pumps and turbines. </li>
 %             </ul>
 %         </td>
 %     </tr>
 %     <tr>
 %         <th scope="row">
-%             <a name="script1"; href="matlab:edit fluidDefinition.mlx;"><b>fluidDefinition.mlx</b> 
+%             <a name="script1"; href="matlab:edit fluidDefinition.mlx;"><b>microscopic.mlx</b> 
 %              <br>
 %             <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
