@@ -87,53 +87,81 @@
 %     </tr>
 %     <tr>
 %         <th scope="row">
-%             <a name="script1"; href="matlab:edit fluidDefinition.mlx;"><b>fluidForces.mlx</b> 
+%             <a name="script1"; href="matlab:edit fluidStatics.mlx;"><b>fluidStatics.mlx</b> 
 %              <br>
 %             <img src = "./Images/ship.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
 %         </th>              
 %         <td>
-%            <strong>Statics</strong>
 %             <ul style="margin-top:5px; margin-bottom:10px">
-%                 <li> Pressure forces. </li>
+%                 <li> Atmospheric pressure variation. </li>
+%                 <li> Hydrostatic forces. </li>
 %                 <li> Buoyancy. </li>
-%                 <li> Manometers. </li>
-%             </ul>
-%             <strong>Dynamics</strong>
-%             <ul style="margin-top:5px; margin-bottom:10px">
-%                 <li> Control volume method. </li>
 %             </ul>
 %         </td>
 %     </tr>
 %     <tr>
 %         <th scope="row">
-%             <a name="script1"; href="matlab:edit fluidAtWork.mlx;"><b>fluidAtWork.mlx</b> 
+%             <a name="script1"; href="matlab:edit fluidDynamics.mlx;"><b>fluidDynamics.mlx</b> 
 %              <br>
 %              <img src = "./Images/windTurbine.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
 %         </th>              
 %         <td>
 %             <ul style="margin-top:5px; margin-bottom:10px">
-%                 <li> Bernoulli equation. </li>
-%                 <li> Flow in a pipe. </li>
-%                 <li> Flow through pumps and turbines. </li>
+%                 <li> Conservation of mass. </li>
+%                 <li> Conservation of momentum. </li>
+%                 <li> Conservation of energy. </li>
+%                 <li> Control Volume Method. </li>
 %             </ul>
 %         </td>
 %     </tr>
 %     <tr>
 %         <th scope="row">
-%             <a name="script1"; href="matlab:edit fluidDefinition.mlx;"><b>microscopic.mlx</b> 
+%             <a name="script1"; href="matlab:edit InternalFlow.mlx;"><b>InternalFlow.mlx</b> 
 %              <br>
 %             <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
 %         </th>              
 %         <td>
 %             <ul style="margin-top:5px; margin-bottom:10px">
-%                 <li> Info script 4. </li>
+%                 <li> Bernoulli equation. </li>
+%                 <li> Viscous flow through a pipe. </li>
+%                 <li> Hydraulic losses. </li>
+%             </ul>
+%         </td>
+%     </tr>
+%     <tr>
+%         <th scope="row">
+%             <a name="script1"; href="matlab:edit differentialForms.mlx;"><b>differentialForms.mlx</b> 
+%              <br>
+%             <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
+%             </a>
+%         </th>              
+%         <td>
+%             <ul style="margin-top:5px; margin-bottom:10px">
+%                 <li> Euler equation. </li>
+%                 <li> Navier-Stokes Equations. </li>
+%                 <li> Boundary-Layer theory. </li>
 %             </ul>
 %         </td>
 %     </tr>
 % </table>
+% <br>
+% <br>
+% <h2>Learing points</h2>
+%   <ul style="margin-top:5px; margin-bottom:10px">
+%       <li> Understanding of material derivative (and so Eulerian specification of flow). </li>
+%       <li> How to derive conservation equations (mass, momentum and energy) </li>
+%       <li> Effect of gravity on fluid... Bouyancy only exist because of gravity! </li>
+%       <li> Three methods for fluid dynamics problem: </li>
+%           <ul style="margin-top:5px; margin-bottom:10px">
+%               <li> differential form (Euler & Navier-Stokes) aka. I need to fully characterize the flow.</li>
+%               <li> control volume method aka. I am ready to make some assumption</li>
+%               <li> Bernoulli aka. particular type of problem</li>
+%           </ul>
+%       <li> Other? </li>
+%   </ul>
 % <br>
 % <br>
 % <h2> Additional Files </h2>
