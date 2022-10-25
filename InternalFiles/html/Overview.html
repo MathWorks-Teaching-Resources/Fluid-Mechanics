@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Fluid Mechanics</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-10-11"><meta name="DC.source" content="Overview.m"><style type="text/css">
+      --><title>Fluid Mechanics</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-10-25"><meta name="DC.source" content="Overview.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -146,25 +146,11 @@ Onramp</a>.
         </th>
         <td>
             <ul style="margin-top:5px; margin-bottom:10px">
-                <li> The concept of fluid parcels. </li>
-                <li> Lagrangian and Eulerian specification of flow. </li>
+                <li> Classification of fluid flow. </li>
+                <li> Common physical quantity.
+                <li> Two points of view: Eulerian and Lagrangian. </li>
                 <li> Material derivative. </li>
                 <li> Reynolds transport theorem. </li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <th scope="row">
-            <a name="script1"; href="matlab:edit fluidStatics.mlx;"><b>fluidStatics.mlx</b>
-             <br>
-            <img src = "./Images/ship.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
-            </a>
-        </th>
-        <td>
-            <ul style="margin-top:5px; margin-bottom:10px">
-                <li> Atmospheric pressure variation. </li>
-                <li> Hydrostatic forces. </li>
-                <li> Buoyancy. </li>
             </ul>
         </td>
     </tr>
@@ -179,23 +165,37 @@ Onramp</a>.
             <ul style="margin-top:5px; margin-bottom:10px">
                 <li> Conservation of mass. </li>
                 <li> Conservation of momentum. </li>
-                <li> Conservation of energy. </li>
                 <li> Control Volume Method. </li>
+                <li> Application to wind turbine. </li>
             </ul>
         </td>
     </tr>
     <tr>
         <th scope="row">
-            <a name="script1"; href="matlab:edit InternalFlow.mlx;"><b>InternalFlow.mlx</b>
+            <a name="script1"; href="matlab:edit ManOnTheMoon.mlx;"><b>ManOnTheMoon.mlx</b>
              <br>
-            <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
+            <img src = "./Images/Apollo11.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
+            </a>
+        </th>
+        <td>
+            <ul style="margin-top:5px; margin-bottom:10px">
+                <li> Fluid dynamic in accelaration frame. </li>
+                <li> Comparison with real data from Apollo 11. </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">
+            <a name="script1"; href="matlab:edit InternalFlow.mlx;"><b>Internal Flow.mlx</b>
+             <br>
+            <img src = "./Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
             </a>
         </th>
         <td>
             <ul style="margin-top:5px; margin-bottom:10px">
                 <li> Bernoulli equation. </li>
-                <li> Viscous flow through a pipe. </li>
-                <li> Hydraulic losses. </li>
+                <li> Friction coefficient. </li>
+                <li> Hydraulic head-loss. </li>
             </ul>
         </td>
     </tr>
@@ -203,7 +203,7 @@ Onramp</a>.
         <th scope="row">
             <a name="script1"; href="matlab:edit differentialForms.mlx;"><b>differentialForms.mlx</b>
              <br>
-            <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
+            <img src = "./Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
             </a>
         </th>
         <td>
@@ -221,7 +221,8 @@ Onramp</a>.
   <ul style="margin-top:5px; margin-bottom:10px">
       <li> Understanding of material derivative (and so Eulerian specification of flow). </li>
       <li> How to derive conservation equations (mass, momentum and energy) </li>
-      <li> Three methods to solve problems and when to use them: </li>
+      <li> Effect of gravity on fluid... Bouyancy only exist because of gravity! </li>
+      <li> Three methods for fluid dynamics problem: </li>
           <ul style="margin-top:5px; margin-bottom:10px">
               <li> differential form (Euler & Navier-Stokes) aka. I need to fully characterize the flow.</li>
               <li> control volume method aka. I am ready to make some assumption</li>
@@ -320,25 +321,11 @@ Onramp</a>.
 %         </th>              
 %         <td>
 %             <ul style="margin-top:5px; margin-bottom:10px">
-%                 <li> The concept of fluid parcels. </li>
-%                 <li> Lagrangian and Eulerian specification of flow. </li>
+%                 <li> Classification of fluid flow. </li>
+%                 <li> Common physical quantity.
+%                 <li> Two points of view: Eulerian and Lagrangian. </li>
 %                 <li> Material derivative. </li>
 %                 <li> Reynolds transport theorem. </li>
-%             </ul>
-%         </td>
-%     </tr>
-%     <tr>
-%         <th scope="row">
-%             <a name="script1"; href="matlab:edit fluidStatics.mlx;"><b>fluidStatics.mlx</b> 
-%              <br>
-%             <img src = "./Images/ship.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
-%             </a>
-%         </th>              
-%         <td>
-%             <ul style="margin-top:5px; margin-bottom:10px">
-%                 <li> Atmospheric pressure variation. </li>
-%                 <li> Hydrostatic forces. </li>
-%                 <li> Buoyancy. </li>
 %             </ul>
 %         </td>
 %     </tr>
@@ -353,23 +340,37 @@ Onramp</a>.
 %             <ul style="margin-top:5px; margin-bottom:10px">
 %                 <li> Conservation of mass. </li>
 %                 <li> Conservation of momentum. </li>
-%                 <li> Conservation of energy. </li>
 %                 <li> Control Volume Method. </li>
+%                 <li> Application to wind turbine. </li>
 %             </ul>
 %         </td>
 %     </tr>
 %     <tr>
 %         <th scope="row">
-%             <a name="script1"; href="matlab:edit InternalFlow.mlx;"><b>InternalFlow.mlx</b> 
+%             <a name="script1"; href="matlab:edit ManOnTheMoon.mlx;"><b>ManOnTheMoon.mlx</b> 
 %              <br>
-%             <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
+%             <img src = "./Images/Apollo11.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
+%             </a>
+%         </th>              
+%         <td>
+%             <ul style="margin-top:5px; margin-bottom:10px">
+%                 <li> Fluid dynamic in accelaration frame. </li>
+%                 <li> Comparison with real data from Apollo 11. </li>
+%             </ul>
+%         </td>
+%     </tr>
+%     <tr>
+%         <th scope="row">
+%             <a name="script1"; href="matlab:edit InternalFlow.mlx;"><b>Internal Flow.mlx</b> 
+%              <br>
+%             <img src = "./Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
 %         </th>              
 %         <td>
 %             <ul style="margin-top:5px; margin-bottom:10px">
 %                 <li> Bernoulli equation. </li>
-%                 <li> Viscous flow through a pipe. </li>
-%                 <li> Hydraulic losses. </li>
+%                 <li> Friction coefficient. </li>
+%                 <li> Hydraulic head-loss. </li>
 %             </ul>
 %         </td>
 %     </tr>
@@ -377,7 +378,7 @@ Onramp</a>.
 %         <th scope="row">
 %             <a name="script1"; href="matlab:edit differentialForms.mlx;"><b>differentialForms.mlx</b> 
 %              <br>
-%             <img src = "../Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
+%             <img src = "./Images/IMAGE_NAME.gif" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
 %         </th>              
 %         <td>
@@ -395,7 +396,8 @@ Onramp</a>.
 %   <ul style="margin-top:5px; margin-bottom:10px">
 %       <li> Understanding of material derivative (and so Eulerian specification of flow). </li>
 %       <li> How to derive conservation equations (mass, momentum and energy) </li>
-%       <li> Three methods to solve problems and when to use them: </li>
+%       <li> Effect of gravity on fluid... Bouyancy only exist because of gravity! </li>
+%       <li> Three methods for fluid dynamics problem: </li>
 %           <ul style="margin-top:5px; margin-bottom:10px">
 %               <li> differential form (Euler & Navier-Stokes) aka. I need to fully characterize the flow.</li>
 %               <li> control volume method aka. I am ready to make some assumption</li>
