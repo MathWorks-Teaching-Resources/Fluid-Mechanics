@@ -106,7 +106,7 @@
 %         <th scope="row">
 %             <a name="script1"; href="matlab:edit ManOnTheMoon.mlx;"><b>ManOnTheMoon.mlx</b> 
 %              <br>
-%             <img src = "./Images/Apollo11.jpg" width=150 style="margin-top:5px; margin-bottom:0px">
+%             <img src = "./Images/Apollo11Track.png" width=150 style="margin-top:5px; margin-bottom:0px">
 %             </a>
 %         </th>              
 %         <td>
