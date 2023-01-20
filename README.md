@@ -42,7 +42,7 @@ An introduction to the control volume method applied to Apollo 11’s launch.
 
 ## ##
 **Data Files**
-- Apollo11.mat` is used in `ManOnTheMoon.mlx` it contains launch data from Apollo 11.
+- Apollo11.mat is used in `ManOnTheMoon.mlx` it contains launch data from Apollo 11.
 
 ## Products ##
 MATLAB&reg;
