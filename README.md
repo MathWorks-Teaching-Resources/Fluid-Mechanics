@@ -1,4 +1,5 @@
-# FLUID MECHANICS [![View <File Exchange Title> on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXX) or [Open in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO-NAME&project=PROJECTNAME.prj)
+# FLUID MECHANICS
+[![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXX) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=Fluiddynamics.prj)
 
 **Curriculum Module**  
 _Created with R2022b. Compatible with R2022b and later releases._ 
