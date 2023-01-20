@@ -1,2 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<Info Type="StartUp" Visible="0" Icon="" File="Overview.html" Name="Overview"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="Overview.html" GroupUUID="default" Icon="" Name="Overview" Type="StartUp" Visible="0">
+  <Extension Name="StartUpPrev" Value="HEAD"/>
+</Info>
