@@ -1,4 +1,7 @@
 function OpenOverview
+
+isMyProjectLoaded("Fluiddynamics");
+
 % Open the overview file
 locDir = pwd;
 if contains(locDir,filesep+"MATLAB Drive")
