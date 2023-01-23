@@ -31,15 +31,15 @@ This module assumes some familiarity with the mass and momentum conservation equ
 This script brings together links and short descriptions of the content in the recommended order of use.
 
 ## ##
-**ManOnTheMoon.mlx** [Open in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO-NAME&project=PROJECTNAME.prj&file=SCRIPT1.mlx)
+**ManOnTheMoon.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=Fluiddynamics.prj&file=ManOnTheMoon.mlx)
 An introduction to the control volume method applied to Apollo 11’s launch.
 
 <img src="https://user-images.githubusercontent.com/114016079/213758688-bd96d212-a6fb-4cde-a2e1-dd69d06c4ae3.png" width="500"> 
 
 **In this script, students will...**
-- Explain the concept of conservation equation
-- Step-by-step walk through the control volume method
-- Development of theoritical model
+- Explore the concept of conservation equation
+- Walk through the control volume method
+- Develop theoritical model of rocket launch
 
 ## ##
 **Data Files**

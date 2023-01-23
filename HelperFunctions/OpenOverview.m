@@ -1,6 +1,6 @@
 function OpenOverview
 
-isMyProjectLoaded("Fluiddynamics");
+isMyProjectLoaded("FluidMechanics");
 
 % Open the overview file
 locDir = pwd;
