@@ -1,16 +1,17 @@
-# CURRICULUM MODULE NAME [![View <File Exchange Title> on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXX) or [Open in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO-NAME&project=PROJECTNAME.prj)
+# FLUID MECHANICS
+[![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXX) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=Fluiddynamics.prj)
 
 **Curriculum Module**  
-_Created with R202XX. Compatible with R202XX and later releases._ 
+_Created with R2022b. Compatible with R2022b and later releases._ 
 
 ## Description ##
-This curriculum module contains interactive [live scripts](https://www.mathworks.com/products/matlab/live-editor.html) that teach EXPLAIN THE CONTENTS HERE
+This curriculum module contains interactive [live scripts](https://www.mathworks.com/products/matlab/live-editor.html) that teach fundamental concepts of fluid mechanics. This module currently includes a single script exploring Apollo 11’s launch in 1969. This script is a step-by-step walk through the control volume method and the development of a theoretical model of the first phase of the launch. More scripts covering internal flow, dimensionless analysis, and pipe network will be released this year, so stay tuned!
 
 These lessons can be used as part of a lecture, as activities in an instructional setting, or as interactive assignments to be completed outside class.
 
-## Get started with the CURRICULUM MODULE NAME interactive examples ##
+## Get started with the fluid mechanics interactive examples ##
 
-**Option 1: Download to Desktop** Download and unzip the repository. Then, double-click the PROJECT_NAME.prj file inside MATLAB&reg;. 
+**Option 1: Download to Desktop** Download and unzip the repository. Then, double-click the Fluiddynamics.prj` file inside MATLAB&reg;. 
 
 **Option 2: [Open in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO-NAME&project=PROJECTNAME.prj)** Log in to your MathWorks account to access your license. If you are associated with a university, use your university email to access a license.
 
@@ -22,40 +23,36 @@ These lessons can be used as part of a lecture, as activities in an instructiona
 - To stop running the script or a section midway (for example, if a loop is running longer than intended), click the <img src="https://user-images.githubusercontent.com/88841524/182219991-17ef7bf9-369b-4463-8de6-9e440ca3bc9b.png"> **Stop** button in the **RUN** section of the **Live Editor** tab in the MATLAB Toolstrip.
 
 ## Prerequisite Domain Knowledge ##
-This module assumes familiarity with FILL IN DETAILS HERE
+This module assumes some familiarity with the mass and momentum conservation equation and the control volume method. A complete understanding of the method is optional, and additional definitions are included in the script.
 
 ## Details ##
 
-**Script1.mlx** [Open in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO-NAME&project=PROJECTNAME.prj&file=SCRIPT1.mlx)
-SUMMARIZE THE CONTENTS OF SCRIPT1.mlx
-
-<img src="link to githubusercontent here" width="500"> 
-
-**In this script, students will...**
-- Learning Goal 1
-- Learning Goal 2
-- etc
+**Navigation.mlx**
+This script brings together links and short descriptions of the content in the recommended order of use.
 
 ## ##
+**ManOnTheMoon.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=Fluiddynamics.prj&file=ManOnTheMoon.mlx)
+An introduction to the control volume method applied to Apollo 11’s launch.
 
-**Script2.mlx** [Open in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO-NAME&project=PROJECTNAME.prj&file=SCRIPT2.mlx)
-SUMMARIZE THE CONTENTS OF SCRIPT2.mlx
-
-<img src="link to githubusercontent here" width="500"> 
+<img src="https://user-images.githubusercontent.com/114016079/213758688-bd96d212-a6fb-4cde-a2e1-dd69d06c4ae3.png" width="500"> 
 
 **In this script, students will...**
-- Learning Goal 1
-- Learning Goal 2
-- etc
+- Explore the concept of conservation equation
+- Walk through the control volume method
+- Develop theoritical model of rocket launch
+
+## ##
+**Data Files**
+- Apollo11.mat is used in `ManOnTheMoon.mlx` it contains launch data from Apollo 11.
 
 ## Products ##
-MATLAB&reg;, EXAMPLE Toolbox&trade; (`ScriptWhichUses EXAMPLE Toolbox.mlx`)
+MATLAB&reg;
 
 ## License ##
-The license for this module is available in the [License.md](LICENSE.md) file in this GitHub repository.
+The license for this module is available in the [LICENSE.md](LICENSE.md) file in this GitHub repository.
 
 ## Support ##
 Please contact the <a href="mailto:onlineteaching@mathworks.com">MathWorks online teaching team.</a>
 
 # #
-_Copyright 2022 The MathWorks, Inc._
+_Copyright 2023 The MathWorks, Inc._
