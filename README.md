@@ -1,5 +1,5 @@
 # FLUID MECHANICS
-[![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXX) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=Fluiddynamics.prj)
+[![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXX) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)
 
 **Curriculum Module**  
 _Created with R2022b. Compatible with R2022b and later releases._ 
@@ -13,7 +13,7 @@ These lessons can be used as part of a lecture, as activities in an instructiona
 
 **Option 1: Download to Desktop** Download and unzip the repository. Then, double-click the Fluiddynamics.prj` file inside MATLAB&reg;. 
 
-**Option 2: [Open in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO-NAME&project=PROJECTNAME.prj)** Log in to your MathWorks account to access your license. If you are associated with a university, use your university email to access a license.
+**Option 2: [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)** Log in to your MathWorks account to access your license. If you are associated with a university, use your university email to access a license.
 
 **Solutions are available upon instructor request.** If you would like to request solutions or have a question, contact the <a href="mailto:onlineteaching@mathworks.com">MathWorks online teaching team.</a>
 
@@ -31,22 +31,22 @@ This module assumes some familiarity with the mass and momentum conservation equ
 This script brings together links and short descriptions of the content in the recommended order of use.
 
 ## ##
-**ManOnTheMoon.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=Fluiddynamics.prj&file=ManOnTheMoon.mlx)
-An introduction to the control volume method applied to Apollo 11’s launch.
+**ManOnTheMoon.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=ManOnTheMoon.mlx)
+A control volume method introduction, with application to developing a theoretical model for Apollo 11’s launch. 
 
 <img src="https://user-images.githubusercontent.com/114016079/213758688-bd96d212-a6fb-4cde-a2e1-dd69d06c4ae3.png" width="500"> 
 
 **In this script, students will...**
-- Explore the concept of conservation equation
+- Explore the concept of conservation equations
 - Walk through the control volume method
-- Develop theoritical model of rocket launch
+- Develop a theoretical model of rocket launch
 
 ## ##
 **Data Files**
 - Apollo11.mat is used in `ManOnTheMoon.mlx` it contains launch data from Apollo 11.
 
 ## Products ##
-MATLAB&reg;
+MATLAB&reg;, Mapping Toolbox&trade;
 
 ## License ##
 The license for this module is available in the [LICENSE.md](LICENSE.md) file in this GitHub repository.
@@ -55,4 +55,4 @@ The license for this module is available in the [LICENSE.md](LICENSE.md) file in
 Please contact the <a href="mailto:onlineteaching@mathworks.com">MathWorks online teaching team.</a>
 
 # #
-_Copyright 2023 The MathWorks, Inc._
+_Copyright 2023 The MathWorks&trade;, Inc._
