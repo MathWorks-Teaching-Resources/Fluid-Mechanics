@@ -1,5 +1,5 @@
 # FLUID MECHANICS
-[![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXX) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)
+[![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/124840-fluid-mechanics) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)
 
 **Curriculum Module**  
 _Created with R2022b. Compatible with R2022b and later releases._ 
@@ -43,7 +43,7 @@ A control volume method introduction, with application to developing a theoretic
 
 ## ##
 **Data Files**
-- Apollo11.mat is used in `ManOnTheMoon.mlx` it contains launch data from Apollo 11.
+- Apollo14.mat is used in `ManOnTheMoon.mlx` it contains launch data from Apollo 14.
 
 ## Products ##
 MATLAB&reg;, Mapping Toolbox&trade;
