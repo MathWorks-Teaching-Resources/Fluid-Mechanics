@@ -1,6 +1,8 @@
 # FLUID MECHANICS
 [![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXX) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)
 
+[![Pipeline Status](https://insidelabs-git.mathworks.com/modular-curriculum-content/mechanical-engineering/fluid-mechanics/badges/main/pipeline.svg)](https://insidelabs-git.mathworks.com/modular-curriculum-content/mechanical-engineering/fluid-mechanics)
+
 **Curriculum Module**  
 _Created with R2022b. Compatible with R2022b and later releases._ 
 
