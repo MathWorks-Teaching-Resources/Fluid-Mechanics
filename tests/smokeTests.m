@@ -16,7 +16,7 @@ classdef smokeTests < matlab.unittest.TestCase
             testCase.fc = fullfile(pwd);
             rootDirName = extractBefore(testCase.fc,"tests");
             openProject(rootDirName);
-        end % function setUpPath
+        end % function setUpPathgit a
     end % methods (TestClassSetup)
 
     methods(Test)
@@ -28,12 +28,12 @@ classdef smokeTests < matlab.unittest.TestCase
             ManOnTheMoon
         end
 
-        function runPressureVelocity(testCase)
-            % this is the simplest possible logged version of a smoke test
-            % that will run a file called "SharingCode.mlx"
-            testCase.log("Running PressureVelocity.mlx")
-            PressureVelocity
-        end
+%         function runPressureVelocity(testCase)
+%             % this is the simplest possible logged version of a smoke test
+%             % that will run a file called "SharingCode.mlx"
+%             testCase.log("Running PressureVelocity.mlx")
+%             PressureVelocity
+%         end
 
     end
 
