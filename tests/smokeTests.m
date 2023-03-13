@@ -22,18 +22,29 @@ classdef smokeTests < matlab.unittest.TestCase
     methods(Test)
 
         function runManOnTheMoon(testCase)
-            % this is the simplest possible logged version of a smoke test
-            % that will run a file called "SharingCode.mlx"
             testCase.log("Running ManOnTheMoon.mlx")
             ManOnTheMoon
         end
 
-%         function runPressureVelocity(testCase)
-%             % this is the simplest possible logged version of a smoke test
-%             % that will run a file called "SharingCode.mlx"
-%             testCase.log("Running PressureVelocity.mlx")
-%             PressureVelocity
-%         end
+        function runPressureVelocity(testCase)
+            testCase.log("Running PressureVelocity.mlx")
+            PressureVelocity
+        end
+
+        function runCarbonNeutral(testCase)
+            testCase.log("Running CarbonNeutral.mlx")
+            CarbonNeutral
+        end
+
+        function runIngenuity(testCase)
+            testCase.log("Running Ingenuity.mlx")
+            Ingenuity
+        end
+
+        function runInternalFlow(testCase)
+            testCase.log("Running InternalFlow.mlx")
+            InternalFlow
+        end
 
     end
 

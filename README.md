@@ -49,9 +49,39 @@ A control volume method introduction, with application to developing a theoretic
 <img src="https://user-images.githubusercontent.com/114016079/213758688-bd96d212-a6fb-4cde-a2e1-dd69d06c4ae3.png" width="500"> 
 
 **In this script, students will...**
-- Work on the link in between pressure and velocity
-- Explore the concept of energy and power in a fluid system
-- Explore Bernoulli's principle
+- Explore the definition of pressure
+- Invastigate the link between pressure and velocity
+- Apply Bernoulli's equation
+
+## ##
+**CarbonNeutral.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=CarbonNeutral.mlx)
+
+<img src="https://user-images.githubusercontent.com/114016079/213758688-bd96d212-a6fb-4cde-a2e1-dd69d06c4ae3.png" width="500"> 
+
+**In this script, students will...**
+- Solve the energy conservation equation
+- Design hydropower plant and a wind farm
+- Compare the feasability of the two system
+
+## ##
+**InternalFlow.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=InternalFlow.mlx)
+
+<img src="https://user-images.githubusercontent.com/114016079/213758688-bd96d212-a6fb-4cde-a2e1-dd69d06c4ae3.png" width="500"> 
+
+**In this script, students will...**
+- Identify and estimate head losses in fluid network
+- Model a fluid netwrork using Simscape Fluid
+- Perform time dependent analysis
+
+## ##
+**Ingenuity.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Ingenuity.mlx)
+
+<img src="https://user-images.githubusercontent.com/114016079/213758688-bd96d212-a6fb-4cde-a2e1-dd69d06c4ae3.png" width="500"> 
+
+**In this script, students will...**
+- Perform a dimensional analysis
+- Design a helicoper that could operate on Mars
+- XXX
 
 ## ##
 **Data Files**
