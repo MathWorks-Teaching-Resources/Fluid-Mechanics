@@ -88,7 +88,7 @@ A control volume method introduction, with application to developing a theoretic
 - Apollo11.mat is used in `ManOnTheMoon.mlx` it contains launch data from Apollo 11.
 
 ## Products ##
-MATLAB&reg;, Mapping Toolbox&trade;
+MATLAB&reg;, Mapping Toolbox&trade;, Symbolic Math Toolbox&trade;
 
 ## License ##
 The license for this module is available in the [LICENSE.md](LICENSE.md) file in this GitHub repository.
