@@ -9,13 +9,22 @@ classdef smokeTests < matlab.unittest.TestCase
         origProj
     end
 
-    methods (TestClassSetup)
+
+     methods (TestClassSetup)
         function setUpPath(testCase)
             testCase.origProj = matlab.project.rootProject;
 
             testCase.fc = fullfile(pwd);
-            rootDirName = extractBefore(testCase.fc,"tests");
+            if ~isempty(extractBefore(testCase.fc,"tests"))
+                rootDirName = extractBefore(testCase.fc,"tests");
+            else
+                rootDirName = testCase.origProj.RootFolder;
+            end
+            %rootDirName = testCase.origProj.RootFolder;
             openProject(rootDirName);
+           
+            testCase.log("Running in " + version)
+
         end % function setUpPath
     end % methods (TestClassSetup)
 
@@ -30,7 +39,7 @@ classdef smokeTests < matlab.unittest.TestCase
                 f.closeNoPrompt;
             end
         end
-        
+
         % This function test load all the MAT files
         function testMAT(testCase)
             files = dir(testCase.origProj.RootFolder+filesep+"**"+filesep+"*.mat");
