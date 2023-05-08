@@ -1,5 +1,5 @@
 # FLUID MECHANICS
-[![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXX) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)
+[![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/124840-fluid-mechanics) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)
 
 **Curriculum Module**  
 _Created with R2023a. Compatible with R2023a and later releases._ 
@@ -22,10 +22,12 @@ You can use these live scripts as demonstrations in lectures, class activities, 
 
 ## Contact Us ##
 
-**Solutions are available upon instructor request.** If you would like to request solutions or have a question, contact the <a href="mailto:onlineteaching@mathworks.com?subject=Solution%20Request:%20Fluid%20Mechanics&body=Please,%20answer%20these%20few%20questions%20and%20share%20any%20feedback%20you%20may%20have;%20the%20solutions%20will%20be%20on%20your%20way.%0A%0AHow%20are%20you%20planning%20on%20using%20this%20module?%0A%0AHow%20did%20you%20find%20this%20module?%0A%0AWhat%20are%20you%20teaching?%0A%0A%0A">MathWorks online teaching team.</a>
+**Solutions are available upon instructor request.** If you would like to request solutions or have a question, contact the [MathWorks online teaching team](mailto:onlineteaching@mathworks.com?subject=Solution%20Request:%20Fluid%20Mechanics&body=Thank%20you%20for%20reaching%20out%20to%20the%20MathWorks%20online%20teaching%20team.%20If%20you%20want%20to%20request%20this%20module%E2%80%99s%20solutions,%20we%20would%20like%20you%20to%20answer%20some%20questions%20about%20your%20intended%20use%20of%20this%20content.%20You%20may%20ignore%20the%20following%20questions%20if%20you%20are%20contacting%20us%20for%20feedback%20and%20questions.%20%0A%0A%20%201.%20How%20are%20you%20planning%20on%20using%20this%20module?%0A%0A%20%202.%20How%20did%20you%20hear%20about%20this%20content?%0A%0A%20%203.%20What%20are%20you%20teaching?%0A%0A%0A").
 
 ## Prerequisite Domain Knowledge ##
-This module assumes some familiarity with the mass and momentum conservation equation and the control volume method. A complete understanding of the method is optional, and additional definitions are included in the script.
+These scripts assume knowledge common with basic derivative and integral calculus and common mechanical and thermodynamics concepts such as energy and temperature. There is minimal MATLAB and Simulink knowledge required to complete the module. ManOnTheMoon is the only script that comes with no expected knowledge computing knowledge. It is highly encouraged to complete additional training for the rest of the module, starting with [MATLAB Onramp](https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted) and [Introduction to Symbolic Math with MATLAB](https://matlabacademy.mathworks.com/details/introduction-to-symbolic-math-with-matlab/symbolic). Those interested in additional training should consider completing [Simulink Onramp](https://matlabacademy.mathworks.com/details/simulink-onramp/simulink) & [Simscape Onramp](https://matlabacademy.mathworks.com/details/simscape-onramp/simscape) as a further learning exploration. 
+
+
 
 ## Details ##
 
@@ -39,8 +41,8 @@ A control volume method introduction, with application to developing a theoretic
 <img src="https://user-images.githubusercontent.com/114016079/213758688-bd96d212-a6fb-4cde-a2e1-dd69d06c4ae3.png" width="500"> 
 
 **In this script, students will...**
-- Explore the concept of conservation equations
-- Walk through the control volume method
+- Learn about conservation laws
+- Apply the control volume method
 - Develop a theoretical model of rocket launch
 
 ## ##
@@ -49,9 +51,9 @@ A control volume method introduction, with application to developing a theoretic
 <img src="https://user-images.githubusercontent.com/114016079/225101226-bf36d1b6-9ad7-48a6-8963-df21943558f5.png" width="500"> 
 
 **In this script, students will...**
-- Explore the definition of pressure
-- Invastigate the link between pressure and velocity
-- Apply Bernoulli's equation
+- Learn about the link between pressure and velocity
+- Explore Bernoulli's equation & principle
+- Study converging pipe flow, Pitot tube, and lift generation
 
 ## ##
 **CarbonNeutral.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=CarbonNeutral.mlx)
@@ -59,9 +61,9 @@ A control volume method introduction, with application to developing a theoretic
 <img src="https://user-images.githubusercontent.com/114016079/225101211-8c00b3e7-a672-404d-94ee-335ee57bbcf9.png" width="500"> 
 
 **In this script, students will...**
-- Solve the energy conservation equation
-- Design hydropower plant and a wind farm
-- Compare the feasability of the two system
+- Learn about energy and power in a fluid system
+- Apply the conservation of energy
+- Analyze the potential of renewable energy source
 
 ## ##
 **InternalFlow.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=InternalFlow.mlx)
@@ -71,7 +73,7 @@ A control volume method introduction, with application to developing a theoretic
 **In this script, students will...**
 - Identify and estimate head losses in fluid network
 - Model a fluid netwrork using Simscape Fluid
-- Perform time dependent analysis
+- Explore time-dependent simulations
 
 ## ##
 **Ingenuity.mlx** [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Ingenuity.mlx)
@@ -79,16 +81,30 @@ A control volume method introduction, with application to developing a theoretic
 <img src="https://user-images.githubusercontent.com/114016079/225101485-1086964e-8b83-4211-8441-1d781b87deb6.png" width="500"> 
 
 **In this script, students will...**
-- Perform a dimensional analysis
-- Design a helicoper that could operate on Mars
-- XXX
+- Learn about the concept of head losses in a pipping network
+- Model a house plumbing using Simscape fluid
+- Perform a complete dimensional analysis
+
+## ##
+**Other related content...**
+
+**Thermodynamic** [![View Fluid Mechanics on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/126784-thermodynamics) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Thermodynamics&project=Thermodynamics.prj)
+
+<img src="https://user-images.githubusercontent.com/114016079/236239665-77b40f6b-d7f3-4cb3-b4e0-8d866f42437a.png" width="500">
+
+Or feel free to explore our other [featured content](https://www.mathworks.com/academia/courseware/course-materials.html).
 
 ## ##
 **Data Files**
-- Apollo14.mat is used in `ManOnTheMoon.mlx` it contains launch data from Apollo 14.
+- Apollo14.mat is used in `ManOnTheMoon.mlx`, it contains launch data from Apollo 14
+- DataCenter.mat is used in `CarbonNeutral.mlx`, it contains fabricated electrical comsumption data for the MathWorks data center
+- HeadLoss.mat is used in `InternalFlow.mlx`, it contains the location of the head losses to find on the house plumbing
+- Ingenuity.mat is used in `Ingenuity.mlx`, it contains the results from Simulink simulation of Ingenuity
+- IngenuitySoln.mat is used in `Ingenuity.mlx`, it contains the solution of an exercise of `Ingenuty.mlx`
+- NatickWeather.mat is used in `CarbonNeutral.mlx`, it contains the weather data from a weather station at the MathWorks headquarter
 
 ## Products ##
-MATLAB&reg;, Mapping Toolbox&trade;, Symbolic Math Toolbox&trade;
+MATLAB&reg;, Mapping Toolbox&trade;, Symbolic Math Toolbox&trade;, Simulink&reg;, and Simscape&trade;.
 
 ## License ##
 The license for this module is available in the [LICENSE.md](LICENSE.md) file in this GitHub repository.
