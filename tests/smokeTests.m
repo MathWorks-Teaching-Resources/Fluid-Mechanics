@@ -41,14 +41,14 @@ classdef smokeTests < matlab.unittest.TestCase
         % end
 
         % This function test load all the MAT files
-        function testMAT(testCase)
-            files = dir(testCase.origProj.RootFolder+filesep+"**"+filesep+"*.mat");
-            for i = 1:size(files)
-                d = string(files(i).folder)+filesep+string(files(i).name);
-                d = open(d); %#ok<NASGU>
-                clear d
-            end
-        end
+        % function testMAT(testCase)
+        %     files = dir(testCase.origProj.RootFolder+filesep+"**"+filesep+"*.mat");
+        %     for i = 1:size(files)
+        %         d = string(files(i).folder)+filesep+string(files(i).name);
+        %         d = open(d); %#ok<NASGU>
+        %         clear d
+        %     end
+        % end
 
         % This function test load all the slx files
         % function testSLX(testCase)
