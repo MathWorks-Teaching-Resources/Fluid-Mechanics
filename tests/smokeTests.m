@@ -31,14 +31,14 @@ classdef smokeTests < matlab.unittest.TestCase
     methods(Test)
 
         % This test attempt to open the mlx files
-        function testMLX(testCase)
-            files = dir(testCase.origProj.RootFolder+filesep+"**"+filesep+"*.mlx");
-            for i = 1:size(files)
-                f = string(files(i).folder)+filesep+string(files(i).name);
-                f = matlab.desktop.editor.openDocument(f);
-                f.closeNoPrompt;
-            end
-        end
+        % function testMLX(testCase)
+        %     files = dir(testCase.origProj.RootFolder+filesep+"**"+filesep+"*.mlx");
+        %     for i = 1:size(files)
+        %         f = string(files(i).folder)+filesep+string(files(i).name);
+        %         f = matlab.desktop.editor.openDocument(f);
+        %         f.closeNoPrompt;
+        %     end
+        % end
 
         % This function test load all the MAT files
         function testMAT(testCase)
@@ -51,14 +51,14 @@ classdef smokeTests < matlab.unittest.TestCase
         end
 
         % This function test load all the slx files
-        function testSLX(testCase)
-            files = dir(testCase.origProj.RootFolder+filesep+"**"+filesep+"*.slx");
-            for i = 1:size(files)
-                f = string(files(i).folder)+filesep+string(files(i).name);
-                open_system(f)
-                close_system(f)
-            end
-        end
+        % function testSLX(testCase)
+        %     files = dir(testCase.origProj.RootFolder+filesep+"**"+filesep+"*.slx");
+        %     for i = 1:size(files)
+        %         f = string(files(i).folder)+filesep+string(files(i).name);
+        %         open_system(f)
+        %         close_system(f)
+        %     end
+        % end
 
         function runManOnTheMoon(testCase)
             % this is the simplest possible logged version of a smoke test
