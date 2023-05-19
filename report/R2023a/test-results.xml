@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" name="smokeTests" skipped="0" tests="8" time="57.8504">
+    <testcase classname="smokeTests" name="testMLX" time="6.5436"/>
+    <testcase classname="smokeTests" name="testMAT" time="0.30582"/>
+    <testcase classname="smokeTests" name="testSLX" time="10.0445"/>
+    <testcase classname="smokeTests" name="runManOnTheMoon" time="2.2049"/>
+    <testcase classname="smokeTests" name="runPressureVelocity" time="7.7983"/>
+    <testcase classname="smokeTests" name="runCarbonNeutral" time="17.157"/>
+    <testcase classname="smokeTests" name="runIngenuity" time="1.0416"/>
+    <testcase classname="smokeTests" name="runInternalFlow" time="12.7547"/>
+  </testsuite>
+</testsuites>
