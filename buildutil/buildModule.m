@@ -15,7 +15,7 @@ function buildModule
     releaseInfo = matlabRelease;
 
     % Run unit tests and capture code coverage
-    testModule("ReportSubdirectory",releaseInfo.Release,"ModuleName","fluid-mechanics","RunFunctionTests",false)
+    testModule("ReportSubdirectory",releaseInfo.Release,"ModuleName","fluid-mechanics")
 
     % Update Badges for GitHub.com
     badgesforModule(rootDir)

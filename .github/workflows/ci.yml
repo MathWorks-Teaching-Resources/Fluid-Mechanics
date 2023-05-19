@@ -38,7 +38,7 @@ jobs:
       - name: Run all tests
         uses: matlab-actions/run-command@v1
         with:
-          command: addpath("buildutil"); testModule("ModuleName","PROJECTNAME.prj","ReportSubdirectory","${{ matrix.MATLABVersion }}");
+          command: addpath("buildutil"); testModule("ModuleName","fluid-mechanics.prj","ReportSubdirectory","${{ matrix.MATLABVersion }}");
 
       # Save the contents of the report directory from each release into a single artifact.  Since each release makes their own directory, they all update the same artifact.
       - name: Save Report Directory
