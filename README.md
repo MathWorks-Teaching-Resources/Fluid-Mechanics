@@ -15,7 +15,7 @@ You can use these live scripts as demonstrations in lectures, class activities, 
 
 ## Get started with the fluid mechanics interactive examples ##
 
-**Option 1: Download to Desktop** Download and unzip the repository. Then, double-click the Fluiddynamics.prj` file inside MATLAB&reg;. 
+**Option 1: Download to Desktop** Download and unzip the repository. Then, double-click the `fluid-mechanics.prj` file inside MATLAB&reg;. 
 
 **Option 2: [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)** Log in to your MathWorks account to access your license. If you are associated with a university, use your university email to access a license.
 
@@ -75,8 +75,8 @@ A control volume method introduction, with application to developing a theoretic
 <img src="https://user-images.githubusercontent.com/114016079/225101245-d7d3f30b-babe-4036-b215-b6e25d40d34b.png" width="500"> 
 
 **In this script, students will...**
-- Identify and estimate head losses in fluid network
-- Model a fluid netwrork using Simscape Fluid
+- Identify and estimate head losses in a fluid network
+- Model a fluid network using Simscape Fluids
 - Explore time-dependent simulations
 
 ## ##
@@ -86,7 +86,7 @@ A control volume method introduction, with application to developing a theoretic
 
 **In this script, students will...**
 - Learn about the concept of head losses in a pipping network
-- Model a house plumbing using Simscape fluid
+- Model a house plumbing using Simscape Fluids
 - Perform a complete dimensional analysis
 
 ## ##
@@ -105,7 +105,7 @@ Or feel free to explore our other [featured content](https://www.mathworks.com/a
 - HeadLoss.mat is used in `InternalFlow.mlx`, it contains the location of the head losses to find on the house plumbing
 - Ingenuity.mat is used in `Ingenuity.mlx`, it contains the results from Simulink simulation of Ingenuity
 - IngenuitySoln.mat is used in `Ingenuity.mlx`, it contains the solution of an exercise of `Ingenuty.mlx`
-- NatickWeather.mat is used in `CarbonNeutral.mlx`, it contains the weather data from a weather station at the MathWorks headquarter
+- NatickWeather.mat is used in `CarbonNeutral.mlx`, it contains the weather data from a weather station at the MathWorks headquarters
 
 ## Products ##
 MATLAB&reg;, Mapping Toolbox&trade;, Symbolic Math Toolbox&trade;, Simulink&reg;, and Simscape&trade;.
