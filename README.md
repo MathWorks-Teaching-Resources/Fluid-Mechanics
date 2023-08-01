@@ -85,8 +85,8 @@ A control volume method introduction, with application to developing a theoretic
 <img src="https://user-images.githubusercontent.com/114016079/225101485-1086964e-8b83-4211-8441-1d781b87deb6.png" width="500"> 
 
 **In this script, students will...**
-- Learn about the concept of head losses in a pipping network
-- Model a house plumbing using Simscape Fluids
+- Learn about the concept of dimensionless number
+- Explore the design of the Ingenuity copter
 - Perform a complete dimensional analysis
 
 ## ##
