@@ -46,3 +46,6 @@ codegen/
 
 # Project settings
 Utilities/ProjectSettings.mat
+
+# Modules solution
+Solutions/*

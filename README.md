@@ -3,11 +3,11 @@
 # <span style="color:rgb(213,80,0)">Fluid Mechanics</span>
 <a name="H_053613DF"></a>
 
-[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXXX-PROJECTNAME) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO_NAME&project=PROJECTNAME.prj)
+[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/124840-fluid-mechanics) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)
 
 **Curriculum Module**
 
-_Created with R2022a. Compatible with R2022a and later releases._
+_Created with R2022b. Compatible with R2022b and later releases._
 
 # Information
 
@@ -28,7 +28,7 @@ Solutions are available upon instructor request. Contact the [MathWorks teaching
 <a name="H_30BC7141"></a>
 ## Prerequisites
 
-These scripts assume knowledge common with basic derivative and integral calculus and common mechanical and thermodynamics concepts such as energy and temperature. There is minimal MATLAB and Simulink knowledge required to complete the module. ManOnTheMoon is the only script that comes with no expected knowledge computing knowledge. It is highly encouraged to complete additional training for the rest of the module, starting with   and [Introduction to Symbolic Math with MATLAB](https://matlabacademy.mathworks.com/details/introduction-to-symbolic-math-with-matlab/symbolic). Those interested in additional training should consider completing [Simulink Onramp](https://matlabacademy.mathworks.com/details/simulink-onramp/simulink) & [Simscape Onramp](https://matlabacademy.mathworks.com/details/simscape-onramp/simscape) as a further learning exploration. 
+These scripts assume knowledge common with basic derivative and integral calculus and common mechanical and thermodynamics concepts such as energy and temperature. There is minimal MATLAB and Simulink knowledge required to complete the module. ManOnTheMoon is the only script that comes with no expected knowledge computing knowledge. It is highly encouraged to complete additional training for the rest of the module, starting with and [Introduction to Symbolic Math with MATLAB](https://matlabacademy.mathworks.com/details/introduction-to-symbolic-math-with-matlab/symbolic). Those interested in additional training should consider completing [Simulink Onramp](https://matlabacademy.mathworks.com/details/simulink-onramp/simulink) & [Simscape Onramp](https://matlabacademy.mathworks.com/details/simscape-onramp/simscape) as a further learning exploration. 
 
 <a name="H_330E72C3"></a>
 ## Getting Started
@@ -52,39 +52,45 @@ MATLAB®, Mapping Toolbox™ (optional), Symbolic Math Toolbox™, Simulink®, S
 <a name="H_E8C62B23"></a>
 # Scripts
 
- ** If you are viewing this in a version of MATLAB prior to R2023b, you can view the learning outcomes for each script* [*here*](https://www.mathworks.com/matlabcentral/fileexchange/REPO_NAME)
+ *If you are viewing this in a version of MATLAB prior to R2023b, you can view the learning outcomes for each script* [*here*](https://www.mathworks.com/matlabcentral/fileexchange/REPO_NAME)
 
-## [**ManOnTheMoon.mlx**](./Scripts/ManOnTheMoon.mlx)
+## [**ManOnTheMoon.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=ManOnTheMoon.mlx)
 |||
 | :-- | :-- |
-| <img src="Images/image_3.png" width="171" alt="image_3.png"> | **In this script, students will...** <br>-  Learn about conservation laws. <br>-  Apply the control volume method. <br>-  Develop theoretical models of a rocket launch.  |
+|  | **In this script, students will...**  |
+| <img src="Images/image_3.png" width="171" alt="image_3.png"> |<br>-  Learn about conservation laws. <br>-  Apply the control volume method. <br>-  Develop theoretical models of a rocket launch.  |
 
-## [**PressureVelocity.mlx**](./Scripts/PressureVelocity.mlx)
+## [**PressureVelocity.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=PressureVelocity.mlx)
 |||
 | :-- | :-- |
-| <img src="Images/image_4.png" width="171" alt="image_4.png"> | **In this script, students will...** <br>-  Learn about the link between pressure and velocity. <br>-  Explore Bernoulli's equation | principle. <br>-  Study converging pipe flow, Pitot tube, and lift generation.  |
+|  | **In this script, students will...**  |
+| <img src="Images/image_4.png" width="171" alt="image_4.png"> |<br>-  Learn about the link between pressure and velocity. <br>-  Explore Bernoulli's equation | principle. <br>-  Study converging pipe flow, Pitot tube, and lift generation.  |
 
-## [**CarbonNeutral.mlx**](./Scripts/CarbonNeutral.mlx)
+## [**CarbonNeutral.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=CarbonNeutral.mlx)
 |||
 | :-- | :-- |
-| <img src="Images/image_5.png" width="171" alt="image_5.png"> | **In this script, students will...** <br>-  Learn about energy and power in a fluid system. <br>-  Apply the conservation of energy. <br>-  Analyze the potential of renewable energy sources.  |
+|  | **In this script, students will...**  |
+| <img src="Images/image_5.png" width="171" alt="image_5.png"> |<br>-  Learn about energy and power in a fluid system. <br>-  Apply the conservation of energy. <br>-  Analyze the potential of renewable energy sources.  |
 
-## [**InternalFlow.mlx**](./Scripts/InternalFlow.mlx)
+## [**InternalFlow.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=InternalFlow.mlx)
 |||
 | :-- | :-- |
-| <img src="Images/image_6.png" width="171" alt="image_6.png"> | **In this script, students will...** <br>-  Learn about the concept of head losses in a pipping network. <br>-  Model a house plumbing using Simscape fluid. <br>-  Explore time-dependent simulations.  |
+|  | **In this script, students will...**  |
+| <img src="Images/image_6.png" width="171" alt="image_6.png"> |<br>-  Learn about the concept of head losses in a pipping network. <br>-  Model a house plumbing using Simscape fluid. <br>-  Explore time-dependent simulations.  |
 
-## [**Ingenuity.mlx**](./Scripts/Ingenuity.mlx)
+## [**Ingenuity.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Ingenuity.mlx)
 |||
 | :-- | :-- |
-| <img src="Images/image_7.gif" width="171" alt="image_7.gif"> | **In this script, students will...** <br>-  Learn about the concept of dimensionless numbers. <br>-  Explore the design of the Ingenuity copter. <br>-  Perform a complete dimensional analysis.  |
+|  | **In this script, students will...**  |
+| <img src="Images/image_7.gif" width="171" alt="image_7.gif"> |<br>-  Learn about the concept of dimensionless numbers. <br>-  Explore the design of the Ingenuity copter. <br>-  Perform a complete dimensional analysis.  |
 
 # Related Courseware Modules
 <a name="H_868F5748"></a>
 ## [Thermodynamics](https://www.mathworks.com/matlabcentral/fileexchange/126784-thermodynamics)
 |||
 | :-- | :-- |
-| <img src="Images/image_8.png" width="171" alt="image_8.png"> | **Available on:**<br>[<img src="Images/image_9.png" width="154" alt="image_9.png">](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)<br>[<img src="Images/image_10.png" width="108" alt="image_10.png">](https://www.mathworks.com/matlabcentral/fileexchange/126784-thermodynamics)  |
+|  | **Available on:**  |
+| <img src="Images/image_8.png" width="171" alt="image_8.png"> | <br>[<img src="Images/image_9.png" width="154" alt="image_9.png">](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Thermodynamics&project=Thermodynamics.prj)<br>[<img src="Images/image_10.png" width="108" alt="image_10.png">](https://www.mathworks.com/matlabcentral/fileexchange/126784-thermodynamics)  |
 
 
 Or feel free to explore our other [modular courseware content](https://www.mathworks.com/matlabcentral/fileexchange/?q=tag%3A%22courseware+module%22&sort=downloads_desc_30d).
