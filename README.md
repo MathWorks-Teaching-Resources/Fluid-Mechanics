@@ -55,41 +55,35 @@ MATLAB®, Mapping Toolbox™ (optional), Symbolic Math Toolbox™, Simulink®, S
  *If you are viewing this in a version of MATLAB prior to R2023b, you can view the learning outcomes for each script* [*here*](https://www.mathworks.com/matlabcentral/fileexchange/REPO_NAME)
 
 ## [**ManOnTheMoon.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=ManOnTheMoon.mlx)
-|||
-| :-- | :-- |
 |  | **In this script, students will...**  |
+| :-- | :-- |
 | <img src="Images/image_3.png" width="171" alt="image_3.png"> |<br>-  Learn about conservation laws. <br>-  Apply the control volume method. <br>-  Develop theoretical models of a rocket launch.  |
 
 ## [**PressureVelocity.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=PressureVelocity.mlx)
-|||
-| :-- | :-- |
 |  | **In this script, students will...**  |
+| :-- | :-- |
 | <img src="Images/image_4.png" width="171" alt="image_4.png"> |<br>-  Learn about the link between pressure and velocity. <br>-  Explore Bernoulli's equation | principle. <br>-  Study converging pipe flow, Pitot tube, and lift generation.  |
 
 ## [**CarbonNeutral.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=CarbonNeutral.mlx)
-|||
-| :-- | :-- |
 |  | **In this script, students will...**  |
+| :-- | :-- |
 | <img src="Images/image_5.png" width="171" alt="image_5.png"> |<br>-  Learn about energy and power in a fluid system. <br>-  Apply the conservation of energy. <br>-  Analyze the potential of renewable energy sources.  |
 
 ## [**InternalFlow.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=InternalFlow.mlx)
-|||
-| :-- | :-- |
 |  | **In this script, students will...**  |
+| :-- | :-- |
 | <img src="Images/image_6.png" width="171" alt="image_6.png"> |<br>-  Learn about the concept of head losses in a pipping network. <br>-  Model a house plumbing using Simscape fluid. <br>-  Explore time-dependent simulations.  |
 
 ## [**Ingenuity.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Ingenuity.mlx)
-|||
-| :-- | :-- |
 |  | **In this script, students will...**  |
+| :-- | :-- |
 | <img src="Images/image_7.gif" width="171" alt="image_7.gif"> |<br>-  Learn about the concept of dimensionless numbers. <br>-  Explore the design of the Ingenuity copter. <br>-  Perform a complete dimensional analysis.  |
 
 # Related Courseware Modules
 <a name="H_868F5748"></a>
 ## [Thermodynamics](https://www.mathworks.com/matlabcentral/fileexchange/126784-thermodynamics)
-|||
-| :-- | :-- |
 |  | **Available on:**  |
+| :-- | :-- |
 | <img src="Images/image_8.png" width="171" alt="image_8.png"> | <br>[<img src="Images/image_9.png" width="154" alt="image_9.png">](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Thermodynamics&project=Thermodynamics.prj)<br>[<img src="Images/image_10.png" width="108" alt="image_10.png">](https://www.mathworks.com/matlabcentral/fileexchange/126784-thermodynamics)  |
 
 
