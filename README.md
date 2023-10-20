@@ -92,6 +92,11 @@ Or feel free to explore our other [modular courseware content](https://www.mathw
 # Educator Resources
 -  [Educator Page](https://www.mathworks.com/academia/educators.html) 
 
+<a name="H_0FA5DA18"></a>
+# Contribute 
+
+Looking for more? Find an issue? Have a suggestion? Please contact the [MathWorks teaching resources team](mailto:%20onlineteaching@mathworks.com). If you want to contribute directly to this project, you can find information about how to do so in the [CONTRIBUTING.md](https://github.com/MathWorks-Teaching-Resources/Fluid-Mechanics/blob/release/CONTRIBUTING.md) page on GitHub.
+
 
 Copyright 2023 The MathWorks™, Inc
 
