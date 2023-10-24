@@ -24,8 +24,8 @@ function testModule(options)
         mkdir(outputDirectory)
     end
     
-    smokeSuite = TestSuite.fromClass(?smokeTests);
-    functionSuite = TestSuite.fromClass(?functionTests);
+    smokeSuite = TestSuite.fromClass(?SmokeTests);
+    functionSuite = TestSuite.fromClass(?FunctionTests);
 
     runner = TestRunner.withTextOutput('OutputDetail', Verbosity.Detailed);
     
