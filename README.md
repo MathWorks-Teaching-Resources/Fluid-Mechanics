@@ -1,6 +1,12 @@
 
 <a name="T_DEF03274"></a>
 # <span style="color:rgb(213,80,0)">Fluid Mechanics</span>
+
+**Curriculum Module**
+
+
+*Created with R2022b. Compatible with R2022b and later releases.*
+
 <a name="H_053613DF"></a>
 
 [![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/124840-fluid-mechanics) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj)
@@ -52,7 +58,7 @@ MATLAB®, Mapping Toolbox™ (optional), Symbolic Math Toolbox™, Simulink®, S
 <a name="H_E8C62B23"></a>
 # Scripts
 
- *If you are viewing this in a version of MATLAB prior to R2023b, you can view the learning outcomes for each script* [*here*](https://www.mathworks.com/matlabcentral/fileexchange/REPO_NAME)
+ *If you are viewing this in a version of MATLAB prior to R2023b, you can view the learning outcomes for each script* [*here*](https://www.mathworks.com/matlabcentral/fileexchange/124840-fluid-mechanics)
 
 ## [**ManOnTheMoon.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=ManOnTheMoon.mlx)
 |  | **In this script, students will...**  |
@@ -100,5 +106,4 @@ Looking for more? Find an issue? Have a suggestion? Please contact the [MathWork
 
 Copyright 2023 The MathWorks™, Inc
 
-
-
+
