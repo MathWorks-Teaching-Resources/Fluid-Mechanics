@@ -1,16 +1,11 @@
-# This is a basic workflow to help you get started with MATLAB Actions
-
 name: MATLAB Build
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ release ]
   pull_request:
     branches: [ release ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -18,12 +13,8 @@ jobs:
     strategy: 
       fail-fast: false
       matrix:
-        MATLABVersion: [R2023b]
-  # This workflow contains a single job called "build" build:
-    # The type of runner that the job will run on
+        MATLABVersion: [R2023a,R2023b]
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
@@ -38,7 +29,7 @@ jobs:
       - name: Run all tests
         uses: matlab-actions/run-command@v1
         with:
-          command: addpath("buildutil"); testModule("ModuleName","fluid-mechanics.prj","ReportSubdirectory","${{ matrix.MATLABVersion }}");
+          command: addpath("SoftwareTests"); TestModule("ModuleName","fluid-mechanics.prj","ReportSubdirectory","${{ matrix.MATLABVersion }}");
 
       # Save the contents of the report directory from each release into a single artifact.  Since each release makes their own directory, they all update the same artifact.
       - name: Save Report Directory
@@ -52,14 +43,7 @@ jobs:
       - name: Generate tested with badge
         uses: matlab-actions/run-command@v1
         with:
-          command: addpath("buildutil"),badgesforModule()     
-          
-      # Publish test results from all the releases
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          junit_files: "report/*/test-results.xml"
+          command: addpath("SoftwareTests"),BadgesforModule()     
 
       # Commit the JSON for the MATLAB releases badge 
       - name: commit changed files
@@ -67,6 +51,6 @@ jobs:
         run: |
           git config user.name "${{ github.workflow }} by ${{ github.actor }}"
           git config user.email "<>"
-          git commit report/badge/tested_with.json -m "Final checkins for release ${{  github.ref_name }}"
+          git commit Images/tested_with.json -m "Update CI badges ${{  github.ref_name }}"
           git fetch
           git push

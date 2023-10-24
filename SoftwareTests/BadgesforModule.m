@@ -1,4 +1,4 @@
-function badgesforModule(rootDir)
+function BadgesforModule(rootDir)
     %BADGESFORMODULE Take the test reports from the runs against multiple releases, and generate the "Tested with" badge
     arguments
         rootDir (1,1) string  = pwd();
@@ -40,7 +40,7 @@ function badgesforModule(rootDir)
             otherwise
                 badgecolor = "red";
         end
-        writeBadgeJSONFile("tested with", releasesTestedWith, badgecolor)
+        WriteBadgeJSONFile("tested with", releasesTestedWith, badgecolor)
     end
 end
 

@@ -1,11 +1,11 @@
-function writeBadgeJSONFile(label,message,color)
-
+function WriteBadgeJSONFile(label,message,color)
     arguments
         label (1,1) string
         message (1,1) string
         color (1,1) string {mustBeMember(color,["success","red","green","blue","orange","yellow"])}
     end
-    outputDirectory = fullfile("report","badge");
+
+    outputDirectory = fullfile("Images");
     if isempty(dir(outputDirectory))
         mkdir(outputDirectory)
     end

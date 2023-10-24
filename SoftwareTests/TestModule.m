@@ -1,7 +1,4 @@
-function testModule(options)
-    %RUNTESTWITHCODECOVERAGE Summary of this function goes here
-    %   Detailed explanation goes here
-    
+function TestModule(options)
     arguments
         options.RunSmokeTests logical = true;
         options.RunFunctionTests logical = true
@@ -13,7 +10,6 @@ function testModule(options)
     import matlab.unittest.TestRunner;
     import matlab.unittest.Verbosity;
     import matlab.unittest.plugins.XMLPlugin;
-    % import matlab.unittest.selectors.HasTag;
     
     oldpath  = addpath("tests",genpath(extractBefore(pwd,"buildutil")));
     finalize = onCleanup(@()(path(oldpath)));
