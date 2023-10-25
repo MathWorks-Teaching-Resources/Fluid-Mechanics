@@ -29,7 +29,7 @@ jobs:
       - name: Run SmokeTests
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject(pwd); runtests(fullfile("SoftwareTests","SmokeTests.m")); 
+          command: openProject(pwd); results = runtests(fullfile("SoftwareTests","SmokeTests.m")); assertSuccess(results); 
 
       # Commit the JSON for the MATLAB releases badge 
       - name: commit changed files
