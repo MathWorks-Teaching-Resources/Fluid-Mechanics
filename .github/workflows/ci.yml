@@ -26,24 +26,10 @@ jobs:
           release: ${{ matrix.MATLABVersion }}
 
       # Runs a set of commands using the runners shell
-      - name: Run all tests
+      - name: Run SmokeTests
         uses: matlab-actions/run-command@v1
         with:
-          command: addpath("SoftwareTests"); TestModule("ModuleName","fluid-mechanics.prj","ReportSubdirectory","${{ matrix.MATLABVersion }}");
-
-      # Save the contents of the report directory from each release into a single artifact.  Since each release makes their own directory, they all update the same artifact.
-      - name: Save Report Directory
-        uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: report
-          path: report
-
-      # Generate the JSON for the releases tested badge
-      - name: Generate tested with badge
-        uses: matlab-actions/run-command@v1
-        with:
-          command: addpath("SoftwareTests"),BadgesforModule()     
+          command: openProject(pwd); runtests(fullfile("SoftwareTests","SmokeTests.m")); 
 
       # Commit the JSON for the MATLAB releases badge 
       - name: commit changed files
@@ -51,6 +37,6 @@ jobs:
         run: |
           git config user.name "${{ github.workflow }} by ${{ github.actor }}"
           git config user.email "<>"
-          git commit Images/tested_with.json -m "Update CI badges ${{  github.ref_name }}"
+          git commit Images/TestedWith.json -m "Update CI badges ${{  github.ref_name }}"
           git fetch
           git push

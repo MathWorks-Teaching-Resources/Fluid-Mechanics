@@ -49,3 +49,6 @@ Utilities/ProjectSettings.mat
 
 # Modules solution
 Solutions/*
+
+# Test results
+SoftwareTests/TestResults.txt
