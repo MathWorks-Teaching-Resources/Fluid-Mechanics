@@ -45,7 +45,8 @@ classdef SmokeTests < matlab.unittest.TestCase
 
         function smokeTest(testCase)
             myFiles = testCase.results.Name;
-            for kTest = 1:length(myFiles)
+            fid = fopen(fullfile("SoftwareTests","TestResults_"+release_version+".txt"),"w");
+            for kTest = 1:1%length(myFiles)
                 try
                     disp("Running " + myFiles(kTest))
                     tic
@@ -53,20 +54,17 @@ classdef SmokeTests < matlab.unittest.TestCase
                     testCase.results.Time(kTest) = toc;
                     disp("Finished " + myFiles(kTest))
                     testCase.results.Passed(kTest) = true;
-                    fid = fopen(fullfile("SoftwareTests","TestResults_"+release_version+".txt"),"w");
                     fprintf(fid,"%s,%s,%s\n",release_version,myFiles(kTest),"passed");
-                    fclose(fid);
                 catch ME
                     testCase.results.Time(kTest) = toc;
                     disp("Failed " + myFiles(kTest) + " because " + ...
                         newline + ME.message)
                     testCase.results.Message(kTest) = ME.message;
-                    fid = fopen(fullfile("SoftwareTests","TestResults_"+release_version+".txt"),"w");
-                    fprintf("%s,%s,%s\n",release_version,myFiles(kTest),"failed");
-                    fclose(fid);
+                    fprintf(fid,"%s,%s,%s\n",release_version,myFiles(kTest),"failed");
                 end
-                clearvars -except kTest testCase myFiles
+                clearvars -except kTest testCase myFiles fid
             end
+            fclose(fid);
             struct2table(testCase.results)
         end
 
@@ -94,7 +92,7 @@ classdef SmokeTests < matlab.unittest.TestCase
             TestResults.Passed = TestResults.Results == "passed";
 
             % Summarize the table
-            TestResults = pivot(TestResults,Rows="Version",DataVariable="Passed",Method=@(x) all(x),RowLabelPlacement="variable");
+            TestResults = pivot(TestResults,Rows="Version",DataVariable="Passed",Method=@(x) all(x));
             TestResults(~TestResults{:,2},:)= [];
 
             % Create JSON

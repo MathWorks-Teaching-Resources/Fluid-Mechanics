@@ -30,6 +30,19 @@ jobs:
         uses: matlab-actions/run-command@v1
         with:
           command: openProject(pwd); results = runtests(fullfile("SoftwareTests","SmokeTests.m")); assertSuccess(results); 
+     
+      # Upload the test results as artifact
+      - name: Upload TestResults
+      - uses: actions/upload-artifact@v3
+        with:
+          name: TestResults
+          path: SoftwareTests/TestResults_*
+
+      # Download the test results from artifact
+      - name: Download TestResults
+      - uses: actions/download-artifact@v3
+        with:
+          name: TestResults
 
       # Commit the JSON for the MATLAB releases badge 
       - name: Commit changed files
