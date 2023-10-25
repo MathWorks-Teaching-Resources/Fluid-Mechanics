@@ -51,4 +51,4 @@ Utilities/ProjectSettings.mat
 Solutions/*
 
 # Test results
-SoftwareTests/TestResults.txt
+SoftwareTests/TestResults_*

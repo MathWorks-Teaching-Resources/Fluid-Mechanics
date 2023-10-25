@@ -32,7 +32,7 @@ jobs:
           command: openProject(pwd); results = runtests(fullfile("SoftwareTests","SmokeTests.m")); assertSuccess(results); 
 
       # Commit the JSON for the MATLAB releases badge 
-      - name: commit changed files
+      - name: Commit changed files
         continue-on-error: true
         run: |
           git config user.name "${{ github.workflow }} by ${{ github.actor }}"

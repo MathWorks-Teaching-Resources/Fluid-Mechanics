@@ -53,17 +53,17 @@ classdef SmokeTests < matlab.unittest.TestCase
                     testCase.results.Time(kTest) = toc;
                     disp("Finished " + myFiles(kTest))
                     testCase.results.Passed(kTest) = true;
-                    fid = fopen(fullfile("SoftwareTests/TestResults.txt"),"a");
+                    fid = fopen(fullfile("SoftwareTests","TestResults_"+release_version+".txt"),"w");
                     fprintf(fid,"%s,%s,%s\n",release_version,myFiles(kTest),"passed");
-                    fclose(fid)
+                    fclose(fid);
                 catch ME
                     testCase.results.Time(kTest) = toc;
                     disp("Failed " + myFiles(kTest) + " because " + ...
                         newline + ME.message)
                     testCase.results.Message(kTest) = ME.message;
-                    fid = fopen(fullfile("SoftwareTests/TestResults.txt"),"a");
+                    fid = fopen(fullfile("SoftwareTests","TestResults_"+release_version+".txt"),"w");
                     fprintf("%s,%s,%s\n",release_version,myFiles(kTest),"failed");
-                    fclose(fid)
+                    fclose(fid);
                 end
                 clearvars -except kTest testCase myFiles
             end
@@ -76,8 +76,17 @@ classdef SmokeTests < matlab.unittest.TestCase
 
         function createBadge(testCase)
 
-            % Read results file
-            TestResults = readtable(fullfile("SoftwareTests","TestResults.txt"),Delimiter=",",ReadVariableNames=false,TextType="string");
+            % Find all the test result
+            ResultFiles = dir("SoftwareTests"+filesep+"TestResults_*");
+
+
+            % Read the results files
+            TestResults = [];
+            for kFiles = 1:size(ResultFiles,1)
+                TestResults = [TestResults;...
+                    readtable(fullfile(ResultFiles(kFiles).folder,ResultFiles(kFiles).name),...
+                    Delimiter=",",ReadVariableNames=false,TextType="string")];
+            end
             TestResults.Properties.VariableNames = ["Version","FileName","Results"];
             TestResults.Version = categorical(TestResults.Version);
             TestResults.FileName = categorical(TestResults.FileName);
@@ -85,7 +94,7 @@ classdef SmokeTests < matlab.unittest.TestCase
             TestResults.Passed = TestResults.Results == "passed";
 
             % Summarize the table
-            TestResults = pivot(TestResults,Rows="Version",DataVariable="Passed",Method=@(x) all(x),RowLabelPlacement="variable")
+            TestResults = pivot(TestResults,Rows="Version",DataVariable="Passed",Method=@(x) all(x),RowLabelPlacement="variable");
             TestResults(~TestResults{:,2},:)= [];
 
             % Create JSON
@@ -101,6 +110,8 @@ classdef SmokeTests < matlab.unittest.TestCase
             end
             badgeInfo.color = "success";
             badgeJSON = jsonencode(badgeInfo);
+
+            % Write JSON file out
             fid = fopen(fullfile("Images","TestedWith.json"),"w");
             fwrite(fid,badgeJSON);
             fclose(fid);
