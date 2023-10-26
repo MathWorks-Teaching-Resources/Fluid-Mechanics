@@ -25,25 +25,36 @@ jobs:
         with:
           release: ${{ matrix.MATLABVersion }}
 
-      # Runs a set of commands using the runners shell
+      # Run SmokeTests
       - name: Run SmokeTests
         uses: matlab-actions/run-command@v1
         with:
           command: openProject(pwd); results = runtests(fullfile("SoftwareTests","SmokeTests.m")); assertSuccess(results); 
+     
+      # Run FunctionTests
+      - name: Run FunctionTests
+        uses: matlab-actions/run-command@v1
+        with:
+          command: openProject(pwd); results = runtests(fullfile("SoftwareTests","FunctionTests.m")); assertSuccess(results); 
 
-      # Upload the test results to artifact
-      - name: Upload results to artifact
-        uses: actions/upload-artifact@v3.1.3
+      # Upload the test results as artifact
+      - name: Upload TestResults
+      - uses: actions/upload-artifact@v3
         with:
           name: TestResults
-          path: SoftwareTests/TestResults_*.txt
-      
-      # Download the artifact to SoftwareTests
-      - name: Download artifact to SoftwareTests
-        uses: actions/download-artifact@v2.1.1
+          path: SoftwareTests/TestResults_${{ matrix.MATLABVersion }}.txt
+
+      # Download the test results from artifact
+      - name: Download TestResults
+      - uses: actions/download-artifact@v3
         with:
           name: TestResults
-          path: SoftwareTests
+
+      # Create the test results badge
+      - name: Run CreateBadge
+        uses: matlab-actions/run-command@v1
+        with:
+          command: openProject(pwd); results = runtests(fullfile("SoftwareTests","CreateBadge.m"));
 
       # Commit the JSON for the MATLAB releases badge 
       - name: Commit changed files
