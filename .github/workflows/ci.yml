@@ -39,14 +39,14 @@ jobs:
 
       # Upload the test results as artifact
       - name: Upload TestResults
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: TestResults
-          path: SoftwareTests/TestResults_${{ matrix.MATLABVersion }}.txt
+          path: ./SoftwareTests/TestResults_${{ matrix.MATLABVersion }}.txt
 
       # Download the test results from artifact
       - name: Download TestResults
-      - uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v2.1.1
         with:
           name: TestResults
 
