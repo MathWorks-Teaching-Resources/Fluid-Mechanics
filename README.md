@@ -5,7 +5,7 @@
 **Curriculum Module**
 
 
-*Created with R2022b. Compatible with R2022b and later releases.*
+*Created with R2023a. Compatible with R2023a and later releases.*
 
 <a name="H_053613DF"></a>
 
