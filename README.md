@@ -13,10 +13,6 @@
 
 ![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FFluid-Mechanics%2Frelease%2FImages%2FTestedWith.json)
 
-**Curriculum Module**
-
-_Created with R2022b. Compatible with R2022b and later releases._
-
 # Information
 
 This curriculum module contains interactive [MATLAB® live scripts](https://www.mathworks.com/products/matlab/live-editor.html) that teach fundamental concepts of fluid mechanics. Topics addressed include dimensional analysis, control volume analysis, internal flow analysis, mass, momentum, and energy conservation equation. You can explore various fluid dynamics applications from your home plumbing to leaving the earth’s orbit and flying on another planet.
