@@ -44,6 +44,16 @@ jobs:
           name: TestResults
           path: ./SoftwareTests/TestResults_${{ matrix.MATLABVersion }}.txt
 
+  badge:
+    if: ${{ always() }}
+    needs: [test]
+    strategy: 
+      fail-fast: false
+      matrix:
+        MATLABVersion: [R2023b]
+    runs-on: ubuntu-latest
+    steps: 
+  
       # Download the test results from artifact
       - name: Download TestResults
         uses: actions/download-artifact@v2.1.1
