@@ -16,26 +16,20 @@ jobs:
         MATLABVersion: [R2023a,R2023b]
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out your repository
       - uses: actions/checkout@v3
       
-      # Sets up MATLAB on the GitHub Actions runner
+      # Sets up MATLAB
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v1
         with:
           release: ${{ matrix.MATLABVersion }}
 
-      # Run SmokeTests
+      # Run all the tests
       - name: Run SmokeTests
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject(pwd); results = runtests(fullfile("SoftwareTests","SmokeTests.m")); assertSuccess(results); 
-     
-      # Run FunctionTests
-      - name: Run FunctionTests
-        uses: matlab-actions/run-command@v1
-        with:
-          command: openProject(pwd); results = runtests(fullfile("SoftwareTests","FunctionTests.m")); assertSuccess(results); 
+          command: openProject(pwd); RunAllTests; 
 
       # Upload the test results as artifact
       - name: Upload TestResults
@@ -49,19 +43,17 @@ jobs:
     needs: [test]
     strategy: 
       fail-fast: false
-      matrix:
-        MATLABVersion: [R2023b]
     runs-on: ubuntu-latest
     steps: 
 
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out your repository
       - uses: actions/checkout@v3
       
-      # Sets up MATLAB on the GitHub Actions runner
+      # Sets up R2023b
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v1
         with:
-          release: ${{ matrix.MATLABVersion }}
+          release: R2023b
   
       # Download the test results from artifact
       - name: Download TestResults
@@ -74,7 +66,7 @@ jobs:
       - name: Run CreateBadge
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject(pwd); results = runtests(fullfile("SoftwareTests","CreateBadge.m"));
+          command: openProject(pwd); CreateTestBadge;
 
       # Commit the JSON for the MATLAB releases badge 
       - name: Commit changed files
