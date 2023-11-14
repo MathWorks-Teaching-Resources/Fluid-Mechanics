@@ -9,8 +9,8 @@ Runner = matlab.unittest.TestRunner.withNoPlugins;
 Results = Runner.run(Suite);
 
 % Format the results in a table and save them
-ResultsTable = table(Results');
+ResultsTable = table(Results')
 writetable(ResultsTable,fullfile("SoftwareTests","TestResults_"+release_version+".txt"));
 
 % Assert success of test
-assertSuccess(Results)
+assertSuccess(Results);
