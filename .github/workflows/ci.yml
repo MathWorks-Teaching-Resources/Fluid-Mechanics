@@ -8,8 +8,9 @@ on:
     branches: [ release ]
   workflow_dispatch:
 
-run-tests:
-  test:
+jobs:
+
+  run-all-tests:
     strategy: 
       fail-fast: false
       matrix:
@@ -67,7 +68,7 @@ run-tests:
 
   create-badge:
     if: ${{ always() }}
-    needs: [test]
+    needs: [run-all-tests]
     strategy: 
       fail-fast: false
     runs-on: ubuntu-latest
@@ -78,7 +79,6 @@ run-tests:
         uses: matlab-actions/setup-matlab@v2
         with:
           release: latest
-          product: 
       - name: Download TestResults
         uses: actions/download-artifact@v2.1.1
         with:
