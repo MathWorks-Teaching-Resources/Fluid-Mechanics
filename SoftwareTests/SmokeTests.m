@@ -6,6 +6,7 @@ classdef SmokeTests < matlab.unittest.TestCase
 
     properties (TestParameter)
         Scripts;
+        Models;
     end
 
     methods (TestParameterDefinition,Static)
@@ -16,34 +17,92 @@ classdef SmokeTests < matlab.unittest.TestCase
             Scripts = {Scripts.name};
         end
 
+        function Models = GetModelName(Project)
+            RootFolder = currentProject().RootFolder;
+            Models = dir(fullfile(RootFolder,"Models","*.slx"));
+            Models = {Models.name};
+        end
+
     end
 
     methods (TestClassSetup)
 
         function SetUpSmokeTest(testCase,Project)
             try
-               currentProject;   
-            catch
-                error("Project is not loaded.")
+               currentProject;  
+            catch ME
+                warning("Project is not loaded.")
             end
         end
 
+    
     end
 
+
+    
     methods(Test)
 
-        function SmokeRun(testCase,Scripts)
-            disp(">> Running "+ Scripts)
-            evalc("run "+ Scripts);
+        function SmokeRunScript(testCase,Scripts)
+            Filename = string(Scripts);
+            switch (Filename)
+                otherwise
+                    SimpleScriptSmokeTest(testCase,Filename);
+            end
+        end
+
+        function SmokeRunModel(testCase,Models)
+            Filename = string(Models);
+            switch (Filename)
+                otherwise
+                    SimpleModelSmokeTest(testCase,Filename);
+            end
         end
             
     end
 
-    methods (TestClassTeardown)
 
-        function closeAllFigure(testCase)
-            close all force  % Close figure windows
-            bdclose all      % Close Simulink models
+    methods (Access = private)
+
+        function SimpleScriptSmokeTest(testCase,Filename)
+
+            % Run the Smoke test
+            RootFolder = currentProject().RootFolder;
+            cd(RootFolder)
+            disp(">> Running " + Filename);
+            try
+                run(fullfile("Scripts",Filename));
+            catch ME
+                testCase.verifyTrue(false,ME.message);
+            end
+            
+            % Log the opened figures to the test reports
+            Figures = findall(groot,'Type','figure');
+            Figures = flipud(Figures);
+            if size(Figures,1) ~= 0
+                for f = 1:size(Figures,1)
+                    FigDiag = matlab.unittest.diagnostics.FigureDiagnostic(Figures(f));
+                    log(testCase,1,FigDiag);
+                end
+            end
+            close all force
+
+        end
+
+        function SimpleModelSmokeTest(testCase,Filename)
+
+            % Run the Smoke test
+            RootFolder = currentProject().RootFolder;
+            cd(RootFolder)
+            disp(">> Running " + Filename);
+            try
+                sim(fullfile("Models",Filename));
+            catch ME
+                testCase.verifyTrue(false,ME.message);
+            end
+
+            % Close Simulink models
+            bdclose all
+
         end
 
     end

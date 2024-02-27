@@ -8,16 +8,16 @@ classdef CheckTestResults < matlab.unittest.TestCase
     end
 
     properties (TestParameter)
-        Version
+        Results
     end
 
 
     methods (TestParameterDefinition,Static)
 
-        function Version = GetResults(Project)
+        function Results = GetWindows(Project)
             RootFolder = currentProject().RootFolder;
-            Version = dir(fullfile(RootFolder,"SoftwareTests","TestResults*.txt"));
-            Version = extractBetween([Version.name],"TestResults_",".txt");
+            Results = dir(fullfile(RootFolder,"SoftwareTests","TestResults*.txt"));
+            Results = {Results.name};
         end
 
     end
@@ -36,9 +36,8 @@ classdef CheckTestResults < matlab.unittest.TestCase
 
     methods(Test)
 
-        function CheckResults(testCase,Version)
-            File = fullfile("SoftwareTests","TestResults_"+Version+".txt");
-            Results = readtable(File,TextType="string");
+        function CheckResults(testCase,Results)
+            Results = readtable(Results,TextType="string");
             testCase.verifyTrue(all(Results.Passed));
         end
 
