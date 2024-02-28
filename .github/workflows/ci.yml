@@ -14,7 +14,7 @@ jobs:
     strategy: 
       fail-fast: false
       matrix:
-        version: [R2021a,R2021b,R2022a,R2022b,R2023a,R2023b]
+        version: [R2023a,R2023b]
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
