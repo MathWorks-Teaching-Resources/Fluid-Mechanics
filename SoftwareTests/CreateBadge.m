@@ -14,7 +14,8 @@ Results.Archicteture = extractBetween(string(Results.Name),"_"+digitsPattern(4)+
 
 % Generate badges
 Architectures = unique(Results.Archicteture);
-for Arch = Architectures
+for i = 1:length(Architectures)
+    Arch = Architectures(i);
     ArchResults = Results(Results.Archicteture == Arch,:);
     ArchResults = ArchResults(ArchResults.Passed,:);
     Badge = struct;
