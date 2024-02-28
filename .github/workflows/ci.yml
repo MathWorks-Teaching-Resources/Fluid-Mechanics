@@ -20,12 +20,12 @@ jobs:
     steps:
       - name: Checks-out your repository
         uses: actions/checkout@v3
-      - name: Start display server
-        if: ${{ always() }}
-        run: |
-          sudo apt-get install xvfb
-          Xvfb :99 &
-          echo "DISPLAY=:99" >> $GITHUB_ENV
+      # - name: Start display server
+      #   if: ${{ always() }}
+      #   run: |
+      #     sudo apt-get install xvfb
+      #     Xvfb :99 &
+      #     echo "DISPLAY=:99" >> $GITHUB_ENV
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
@@ -49,16 +49,16 @@ jobs:
     steps:
       - name: Checks-out your repository
         uses: actions/checkout@v3
-      - name: Start display server
-        run: |
-          sudo apt-get install xvfb
-          Xvfb :99 &
-          echo "DISPLAY=:99" >> $GITHUB_ENV
+      # - name: Start display server
+      #   run: |
+      #     sudo apt-get install xvfb
+      #     Xvfb :99 &
+      #     echo "DISPLAY=:99" >> $GITHUB_ENV
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
           release: latest
-          products: Simulink Control_System_toolbox Curve_Fitting_Toolbox Deep_Learning_Toolbox Image_Processing_Toolbox Optimization_Toolbox Signal_Processing_Toolbox Statistics_And_Machine_Learning_Toolbox Symbolic_Math_Toolbox Text_Analytic_Toolbox 
+          products: Simulink Control_System_Toolbox Curve_Fitting_Toolbox Deep_Learning_Toolbox Image_Processing_Toolbox Optimization_Toolbox Signal_Processing_Toolbox Statistics_and_Machine_Learning_Toolbox Symbolic_Math_Toolbox Text_Analytics_Toolbox 
       - name: Run All Tests
         uses: matlab-actions/run-command@v2
         continue-on-error: true
