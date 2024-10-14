@@ -132,7 +132,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
                 Request.Header    = HeaderField("X-GitHub-Api-Version","2022-11-28");
                 Request.Header(2) = HeaderField("Accept","application/vnd.github+json");
                 [Answer,~,~] = send(Request,Address);
-                websave(fullfile("Utilities/SurveyLinks.mat"),Answer.Body.Data.download_url)
+                websave(fullfile("Utilities/SurveyLinks.mat"),Answer.Body.Data.download_url);
             catch
             end
 
@@ -197,7 +197,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
             app.UIFigure = uifigure('Visible', 'off');
             app.UIFigure.AutoResizeChildren = 'off';
             app.UIFigure.Position = [100 100 276 430];
-            app.UIFigure.Name = 'MATLAB App';
+            app.UIFigure.Name = 'StartUp App';
             app.UIFigure.Resize = 'off';
             app.UIFigure.CloseRequestFcn = createCallbackFcn(app, @UIFigureCloseRequest, true);
 

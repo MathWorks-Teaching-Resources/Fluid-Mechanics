@@ -8,93 +8,103 @@ on:
     branches: [ release ]
   workflow_dispatch:
 
-jobs:
+# Add permission to write GitHub pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
-  run-all-tests:
+jobs:
+  test:
     strategy: 
       fail-fast: false
       matrix:
-        version: [R2023a,R2023b,R2024a]
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: Checks-out your repository
-        uses: actions/checkout@v3
-      # - name: Start display server
-      #   if: ${{ always() }}
-      #   run: |
-      #     sudo apt-get install xvfb
-      #     Xvfb :99 &
-      #     echo "DISPLAY=:99" >> $GITHUB_ENV
-      - name: Setup MATLAB
-        uses: matlab-actions/setup-matlab@v2
-        with:
-          release: ${{ matrix.version }}
-          products: Simulink Simscape Symbolic_Math_Toolbox Mapping_Toolbox Simscape_Fluids
-      - name: Run all the tests
-        uses: matlab-actions/run-command@v2
-        with:
-          command: openProject(pwd); RunAllTests; 
-      - name: Upload the test results as artifact
-        uses: actions/upload-artifact@v3.1.3
-        with:
-          name: TestResults
-          path: ./SoftwareTests/TestResults_*.txt
-
-  matlab-online-basic:
-    name: Run test with MATLAB Online basic
-    strategy: 
-      fail-fast: false
+        MATLABVersion: [R2024a,R2024b]
     runs-on: ubuntu-latest
     steps:
-      - name: Checks-out your repository
-        uses: actions/checkout@v3
-      # - name: Start display server
-      #   run: |
-      #     sudo apt-get install xvfb
-      #     Xvfb :99 &
-      #     echo "DISPLAY=:99" >> $GITHUB_ENV
+      # Checks-out your repository
+      - uses: actions/checkout@v4
+      
+      # Sets up a display server
+      - name: Start display server
+        if: ${{ always() }}
+        run: |
+          sudo apt-get install xvfb
+          Xvfb :99 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
+      
+      # Sets up MATLAB
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: latest
-          products: Simulink Control_System_Toolbox Curve_Fitting_Toolbox Deep_Learning_Toolbox Image_Processing_Toolbox Optimization_Toolbox Signal_Processing_Toolbox Statistics_and_Machine_Learning_Toolbox Symbolic_Math_Toolbox Text_Analytics_Toolbox 
-      - name: Run All Tests
+          release: ${{ matrix.MATLABVersion }}
+          products: Simulink Simscape Symbolic_Math_Toolbox Mapping_Toolbox Simscape_Fluids
+
+      # Run all the tests
+      - name: Run SmokeTests
         uses: matlab-actions/run-command@v2
-        continue-on-error: true
         with:
           command: openProject(pwd); RunAllTests; 
-          startup-options: -webui
 
-  create-badge:
+      # Upload the test results as artifact
+      - name: Upload TestResults
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults_${{ matrix.MATLABVersion }}
+          path: ./public/*
+          overwrite: true
+
+  badge:
     if: ${{ always() }}
-    needs: [run-all-tests]
+    needs: [test]
     strategy: 
       fail-fast: false
     runs-on: ubuntu-latest
     steps: 
-      - name: Checks-out your repository
-        uses: actions/checkout@v3
+
+      # Checks-out your repository
+      - uses: actions/checkout@v4
+      
+      # Sets up R2023b
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: latest
-      - name: Download TestResults
-        uses: actions/download-artifact@v2.1.1
+          release: R2024b
+  
+      # Download the test results from artifact
+      - name: Download All TestResults
+        uses: actions/download-artifact@v4
         with:
-          name: TestResults
-          path: ./SoftwareTests/
-      - name: Run CreateBadge
+          path: public
+          pattern: TestResults_*
+          merge-multiple: true
+          
+      # Create the test results badge
+      - name: Run PostSmokeTest
         uses: matlab-actions/run-command@v2
         with:
-          command: openProject(pwd); CreateBadge;
-      - name: Commit badges
+          command: openProject(pwd); PostSmokeTest;
+      
+      # Deploy reports to GitHub pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Commit the JSON for the MATLAB releases badge 
+      - name: Commit changed files
         continue-on-error: true
         run: |
           git config user.name "${{ github.workflow }} by ${{ github.actor }}"
           git config user.email "<>"
           git pull
-          git add Images/Badge*.json
-          git commit Images/Badge*.json -m "Update CI badges ${{  github.ref_name }}"
+          git add Images/TestedWith.json
+          git commit Images/TestedWith.json -m "Update CI badges ${{  github.ref_name }}"
           git fetch
           git push

@@ -1,6 +1,2 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<<<<<<< HEAD
-<Info description="This curriculum module contains interactive MATLAB® live scripts  that teach fundamental concepts of fluid mechanics. This module currently includes a single script exploring Apollo 11’s launch in 1969. This script is a step-by-step walk through the control volume method and the development of a theoretical model of the first phase of the launch. More scripts covering internal flow, dimensionless analysis, and pipe network will be released this year, so stay tuned!"/>
-=======
-<Info description="This curriculum module contains interactive MATLAB® live scripts that teach fundamental concepts of fluid mechanics. Topics addressed include dimensional analysis, control volume analysis, internal flow analysis, mass, momentum, and energy conservation equation. You can explore various fluid dynamics applications from your home plumbing to leaving the earth’s orbit and flying on another planet.&#xa;You can use these live scripts as demonstrations in lectures, class activities, or interactive assignments outside class. The module is divided into five interactive instructional scripts."/>
->>>>>>> origin/main
+<?xml version="1.0" encoding="UTF-8"?>
+<Info description="Interactive courseware that introduces foundational-level concepts as taught in introductory courses in fluid mechanics."/>

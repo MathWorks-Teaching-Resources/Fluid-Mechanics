@@ -1,61 +1,93 @@
 classdef SmokeTests < matlab.unittest.TestCase
+
+    properties
+        RootFolder
+    end
     
     properties (ClassSetupParameter)
-        Project = {''};
+        Project = {currentProject()};
     end
 
     properties (TestParameter)
-        Scripts;
-        Models;
+        File;
     end
 
     methods (TestParameterDefinition,Static)
 
-        function Scripts = GetScriptName(Project)
+        function File = RetrieveFile(Project) %#ok<INUSD>
+            % Retrieve student template files:
             RootFolder = currentProject().RootFolder;
-            Scripts = dir(fullfile(RootFolder,"Scripts","*.mlx"));
-            Scripts = {Scripts.name};
-        end
-
-        function Models = GetModelName(Project)
-            RootFolder = currentProject().RootFolder;
-            Models = dir(fullfile(RootFolder,"Models","*.slx"));
-            Models = {Models.name};
+            File = dir(fullfile(RootFolder,"Scripts","*.mlx"));
+            File = {File.name}; 
         end
 
     end
 
     methods (TestClassSetup)
 
-        function SetUpSmokeTest(testCase,Project)
-            try
-               currentProject;  
-            catch ME
-                warning("Project is not loaded.")
-            end
+        function SetUpSmokeTest(testCase,Project) %#ok<INUSD>
+            % Navigate to project root folder:
+            testCase.RootFolder = Project.RootFolder;
+            cd(testCase.RootFolder)
+            
+            % Close the StartUp app if still open:
+            delete(findall(groot,'Name','StartUp App'))
+
+            % Log MATLAB version:
+            testCase.log("Running in " + version)
         end
 
-    
     end
-
-
     
     methods(Test)
 
-        function SmokeRunScript(testCase,Scripts)
-            Filename = string(Scripts);
-            switch (Filename)
-                otherwise
-                    SimpleScriptSmokeTest(testCase,Filename);
-            end
-        end
+        function SmokeRun(testCase,File)
 
-        function SmokeRunModel(testCase,Models)
-            Filename = string(Models);
-            switch (Filename)
-                otherwise
-                    SimpleModelSmokeTest(testCase,Filename);
+            % Navigate to project root folder:
+            cd(testCase.RootFolder)
+            FileToRun = string(File);
+
+            % Pre-test:
+            PreFiles = CheckPreFile(testCase,FileToRun);
+            run(PreFiles);
+
+            % Run SmokeTest
+            disp(">> Running " + FileToRun);
+            try
+                run(fullfile("Scripts",FileToRun));
+            catch ME 
+                
             end
+
+            % Post-test:
+            PostFiles = CheckPostFile(testCase,FileToRun);
+            run(PostFiles)
+
+            % Log every figure created during run:
+            Figures = findall(groot,'Type','figure');
+            Figures = flipud(Figures);
+            if ~isempty(Figures)
+                for f = 1:size(Figures,1)
+                    if ~isempty(Figures(f).Number)
+                        FigDiag = matlab.unittest.diagnostics.FigureDiagnostic(Figures(f),'Formats','png');
+                        log(testCase,1,FigDiag);
+                    end
+                end
+            end
+
+            % Close all figures and Simulink models
+            close all force
+            if any(matlab.addons.installedAddons().Name == "Simulink")
+                bdclose all
+            end
+
+            % Rethrow error if any
+            if exist("ME","var")
+                if ~any(strcmp(ME.identifier,KnownIssuesID))
+                    rethrow(ME)
+                end
+            end
+
         end
             
     end
@@ -63,46 +95,34 @@ classdef SmokeTests < matlab.unittest.TestCase
 
     methods (Access = private)
 
-        function SimpleScriptSmokeTest(testCase,Filename)
-
-            % Run the Smoke test
-            RootFolder = currentProject().RootFolder;
-            cd(RootFolder)
-            disp(">> Running " + Filename);
-            try
-                run(fullfile("Scripts",Filename));
-            catch ME
-                testCase.verifyTrue(false,ME.message);
+       function Path = CheckPreFile(testCase,Filename)
+            PreFile = "Pre"+replace(Filename,".mlx",".m");
+            PreFilePath = fullfile(testCase.RootFolder,"SoftwareTests","PreFiles",PreFile);
+            if ~isfolder(fullfile(testCase.RootFolder,"SoftwareTests/PreFiles"))
+                mkdir(fullfile(testCase.RootFolder,"SoftwareTests/PreFiles"))
             end
-            
-            % Log the opened figures to the test reports
-            Figures = findall(groot,'Type','figure');
-            Figures = flipud(Figures);
-            if size(Figures,1) ~= 0
-                for f = 1:size(Figures,1)
-                    FigDiag = matlab.unittest.diagnostics.FigureDiagnostic(Figures(f));
-                    log(testCase,1,FigDiag);
-                end
+            if ~isfile(PreFilePath)
+                writelines("%  Pre-run script for "+Filename,PreFilePath)
+                writelines("% ---- Known Issues     -----",PreFilePath,'WriteMode','append');
+                writelines("KnownIssuesID = "+char(34)+char(34)+";",PreFilePath,'WriteMode','append');
+                writelines("% ---- Pre-run commands -----",PreFilePath,'WriteMode','append');
+                writelines(" ",PreFilePath,'WriteMode','append');
             end
-            close all force
-
+            Path = PreFilePath;
         end
 
-        function SimpleModelSmokeTest(testCase,Filename)
-
-            % Run the Smoke test
-            RootFolder = currentProject().RootFolder;
-            cd(RootFolder)
-            disp(">> Running " + Filename);
-            try
-                sim(fullfile("Models",Filename));
-            catch ME
-                testCase.verifyTrue(false,ME.message);
+        function Path = CheckPostFile(testCase,Filename)
+            PostFile = "Post"+replace(Filename,".mlx",".m");
+            PostFilePath = fullfile(testCase.RootFolder,"SoftwareTests","PostFiles",PostFile);
+            if ~isfolder(fullfile(testCase.RootFolder,"SoftwareTests/PostFiles"))
+                mkdir(fullfile(testCase.RootFolder,"SoftwareTests/PostFiles"))
             end
-
-            % Close Simulink models
-            bdclose all
-
+            if ~isfile(PostFilePath)
+                writelines("%  Post-run script for "+Filename,PostFilePath)
+                writelines("% ---- Post-run commands -----",PostFilePath,'WriteMode','append');
+                writelines(" ",PostFilePath,'WriteMode','append');
+            end
+            Path = PostFilePath;
         end
 
     end
