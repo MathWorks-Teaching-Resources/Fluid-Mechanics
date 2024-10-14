@@ -3,17 +3,13 @@
 
 **Curriculum Module**
 
-
-*Created with R2022b. Compatible with R2022b and later releases.*
-
-
 [![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/124840-fluid-mechanics) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=README.mlx)
 
 [![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FFluid-Mechanics%2Frelease%2FImages%2FTestedWith.json)](https://MathWorks-Teaching-Resources.github.io/Fluid-Mechanics)
 
 **Curriculum Module**
 
-_Created with R2024a. Compatible with R2024a and later releases._
+_Created with R2022b. Compatible with R2024a and later releases._
 
 # Information
 
