@@ -2,26 +2,28 @@ classdef SmokeTests < matlab.unittest.TestCase
 
     properties
         RootFolder
-    end
+        sparedEditors % Files already open when the test starts
+    end % properties
     
     properties (ClassSetupParameter)
         Project = {currentProject()};
-    end
+    end % ClassSetupParameter
 
     properties (TestParameter)
         File;
-    end
+    end % TestParameter
 
     methods (TestParameterDefinition,Static)
 
         function File = RetrieveFile(Project) %#ok<INUSD>
             % Retrieve student template files:
             RootFolder = currentProject().RootFolder;
-            File = dir(fullfile(RootFolder,"Scripts","*.mlx"));
+            File = dir(fullfile(RootFolder,"Scripts","*.m"));
+            File = [File; dir(fullfile(RootFolder,"Scripts","*.mlx"))];
             File = {File.name}; 
         end
 
-    end
+    end % Static TestParameterDefinition
 
     methods (TestClassSetup)
 
@@ -37,8 +39,28 @@ classdef SmokeTests < matlab.unittest.TestCase
             testCase.log("Running in " + version)
         end
 
-    end
+    end % TestClassSetup
+
+    methods(TestMethodSetup)
+        function recordEditorsToSpare(testCase)
+            testCase.sparedEditors = matlab.desktop.editor.getAll;
+            testCase.sparedEditors = {testCase.sparedEditors.Filename};
+        end
+    end % TestMethodSetup
     
+    methods(TestMethodTeardown)
+        function closeOpenedEditors_thenDeleteWorkingDir(testCase)
+            openEditors = matlab.desktop.editor.getAll;
+            for editor=openEditors(1:end)
+                if any(strcmp(editor.Filename, testCase.sparedEditors))
+                    continue;
+                end
+                % if not on our list, close the file
+                editor.close();
+            end
+        end
+    end % TestMethodTeardown
+
     methods(Test)
 
         function SmokeRun(testCase,File)
@@ -90,13 +112,13 @@ classdef SmokeTests < matlab.unittest.TestCase
 
         end
             
-    end
+    end % Test Methods
 
 
     methods (Access = private)
 
        function Path = CheckPreFile(testCase,Filename)
-            PreFile = "Pre"+replace(Filename,".mlx",".m");
+            PreFile = "Pre"+extractBefore(Filename,".m")+".m";
             PreFilePath = fullfile(testCase.RootFolder,"SoftwareTests","PreFiles",PreFile);
             if ~isfolder(fullfile(testCase.RootFolder,"SoftwareTests/PreFiles"))
                 mkdir(fullfile(testCase.RootFolder,"SoftwareTests/PreFiles"))
@@ -112,7 +134,7 @@ classdef SmokeTests < matlab.unittest.TestCase
         end
 
         function Path = CheckPostFile(testCase,Filename)
-            PostFile = "Post"+replace(Filename,".mlx",".m");
+            PostFile = "Post"+extractBefore(Filename,".m")+".m";
             PostFilePath = fullfile(testCase.RootFolder,"SoftwareTests","PostFiles",PostFile);
             if ~isfolder(fullfile(testCase.RootFolder,"SoftwareTests/PostFiles"))
                 mkdir(fullfile(testCase.RootFolder,"SoftwareTests/PostFiles"))
@@ -125,6 +147,6 @@ classdef SmokeTests < matlab.unittest.TestCase
             Path = PostFilePath;
         end
 
-    end
+    end % Private Methods
 
-end
+end % Smoketests

@@ -19,20 +19,21 @@ jobs:
     strategy: 
       fail-fast: false
       matrix:
-        MATLABVersion: [R2024a,R2024b]
-        os: [ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+        MATLABVersion: [R2024b,R2025a,R2025b]
+    runs-on: ubuntu-latest
+    env:
+      LD_PRELOAD: /usr/lib/x86_64-linux-gnu/libstdc++.so.6
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v4
       
       # Sets up a display server
-      #- name: Start display server
-      #  if: ${{ always() }}
-      #  run: |
-      #    sudo apt-get install xvfb
-      #    Xvfb :99 &
-      #    echo "DISPLAY=:99" >> $GITHUB_ENV
+      - name: Start display server
+        if: ${{ always() }}
+        run: |
+          sudo apt-get install xvfb
+          Xvfb :99 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
       
       # Sets up MATLAB
       - name: Setup MATLAB
