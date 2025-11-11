@@ -57,7 +57,7 @@ elseif all(~Passed)
     Badge.message = join("R"+Version," | ");
 end
 Badge = jsonencode(Badge);
-writelines(Badge,fullfile("Images","TestedWith.json"));
+writelines(Badge,fullfile("public","TestedWith.json"));
 
 if ShowReport
     web(fullfile(Folder,"index.html"))

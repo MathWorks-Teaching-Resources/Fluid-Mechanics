@@ -69,11 +69,11 @@ jobs:
       # Checks-out your repository
       - uses: actions/checkout@v4
       
-      # Sets up R2023b
+      # Sets latest MATLAB
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: R2025b
+          release: latest
   
       # Download the test results from artifact
       - name: Download All TestResults
@@ -88,6 +88,15 @@ jobs:
         uses: matlab-actions/run-command@v2
         with:
           command: openProject(pwd); PostSmokeTest;
+
+     # Upload the badege as artifact
+      - name: Upload Badge
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Badge-Artifact
+          path: ./public/TestedWith.json
+          overwrite: true
       
       # Deploy reports to GitHub pages
       - name: Setup Pages
@@ -101,13 +110,13 @@ jobs:
         uses: actions/deploy-pages@v4
 
       # Commit the JSON for the MATLAB releases badge 
-      - name: Commit changed files
-        continue-on-error: true
-        run: |
-          git config user.name "${{ github.workflow }} by ${{ github.actor }}"
-          git config user.email "<>"
-          git pull
-          git add Images/TestedWith.json
-          git commit Images/TestedWith.json -m "Update CI badges ${{  github.ref_name }}"
-          git fetch
-          git push
+      # - name: Commit changed files
+      #   continue-on-error: true
+      #   run: |
+      #     git config user.name "${{ github.workflow }} by ${{ github.actor }}"
+      #     git config user.email "<>"
+      #     git pull
+      #     git add Images/TestedWith.json
+      #     git commit Images/TestedWith.json -m "Update CI badges ${{  github.ref_name }}"
+      #     git fetch
+      #     git push
