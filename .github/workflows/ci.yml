@@ -108,15 +108,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      # Commit the JSON for the MATLAB releases badge 
-      # - name: Commit changed files
-      #   continue-on-error: true
-      #   run: |
-      #     git config user.name "${{ github.workflow }} by ${{ github.actor }}"
-      #     git config user.email "<>"
-      #     git pull
-      #     git add Images/TestedWith.json
-      #     git commit Images/TestedWith.json -m "Update CI badges ${{  github.ref_name }}"
-      #     git fetch
-      #     git push
+        
