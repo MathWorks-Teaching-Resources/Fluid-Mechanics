@@ -106,7 +106,7 @@ jobs:
       - name: Run buildtool test
         uses: matlab-actions/run-build@v3
         with:
-          tasks: buildtool test;
+          tasks: test
           build-options: -continueOnFailure
 
       # Upload only files required by buildtool report/pages to reduce artifact size.
@@ -150,9 +150,10 @@ jobs:
           
       # Aggregate test reports and generate badge via buildfile.
       - name: Run buildtool report
-        uses: matlab-actions/run-command@v3
+        uses: matlab-actions/run-build@v3
         with:
-          command: openProject(pwd); buildtool report;
+          tasks: report
+          build-options: -continueOnFailure
 
       # Upload the badge as artifact
       - name: Upload Badge
