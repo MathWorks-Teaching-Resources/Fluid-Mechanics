@@ -145,7 +145,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           path: public
-          pattern: test-results-*
+          pattern: R20*
           merge-multiple: false
           
       # Aggregate test reports and generate badge via buildfile.
