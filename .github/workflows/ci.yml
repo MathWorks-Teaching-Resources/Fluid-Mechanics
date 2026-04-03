@@ -76,7 +76,7 @@ jobs:
     strategy: 
       fail-fast: false
       matrix:
-        Releases: [R2024b, R2025a, R2025b]
+        Releases: [R2025a, R2025b]
     runs-on: ubuntu-latest
     env:
       MATLAB_PRODUCTS: Simulink Simscape Symbolic_Math_Toolbox Mapping_Toolbox Simscape_Fluids
@@ -142,7 +142,7 @@ jobs:
   
       # Download the test results from artifact
       - name: Download All TestResults
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v8
         with:
           path: public
           pattern: test-results-*
