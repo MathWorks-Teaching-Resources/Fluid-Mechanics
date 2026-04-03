@@ -134,13 +134,13 @@ function createBadge(~)
     badge.label = "Test Status";
     if all(result.Passed)
         badge.color = "success";
-        badge.message = join("R" + versionLabel, " | ");
+        badge.message = join(versionLabel, " | ");
     elseif any(Passed)
         badge.color = "yellowgreen";
-        badge.message = join("R" + versionLabel(result.Passed), " | ");
+        badge.message = join(versionLabel(result.Passed), " | ");
     else
         badge.color = "critical";
-        badge.message = join("R" + versionLabel, " | ");
+        badge.message = join(versionLabel, " | ");
     end
 
     writelines(jsonencode(badge), fullfile("public", "TestedWith.json"));
@@ -170,7 +170,7 @@ html = fileread(indexFile);
 % Example matches:
 %   ResultArtifactPath=2026a
 %   ResultArtifactPath=2027b
-pattern = 'ResultArtifactPath=(20[0-9][0-9][ab])';
+pattern = 'ResultArtifactPath=R(20[0-9][0-9][ab])';
 [startIdx, endIdx, tokenGroups, tokenMatches] = regexp(html, pattern, 'start', 'end', 'tokens', 'match');
 
 if isempty(startIdx)
