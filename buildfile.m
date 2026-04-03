@@ -64,6 +64,7 @@ plan("test:courseware") = TestTask("SoftwareTests/CoursewareSmokeTests.m",...
     Description="Run CoursewareSmokeTests", ...
     SourceFiles="Scripts",...
     RunOnlyImpactedTests=true);
+plan("test:courseware").Outputs = releaseFolder;
 
 % TASK 2: FunctionTests (Conditional)
 % Tests functions in development in FunctionLibrary/
@@ -88,8 +89,7 @@ plan("report:validate") = TestTask("SoftwareTests/CrossReleaseTestResults.m",...
     IncludeSubfolders=false,...
     TestResults=fullfile("public",["index.html" "CrossReleaseTestResults.mat"]),...
     Description="Run CrossReleaseTestResults");
-
-% plan("report:link");
+plan("report:validate").Outputs = fullfile("public",["*.html" "*.mat"]);
 
 % TASK 4: badge (CI-only, depends on report:check)
 % Generates ./public/TestedWith.json - A JSON badge showing tested releases and pass/fail status
@@ -100,7 +100,16 @@ plan("report:validate") = TestTask("SoftwareTests/CrossReleaseTestResults.m",...
 % This badge is deployed to GitHub Pages and often displayed in README.md
 plan("report:badge") = Task(Actions=@createBadge);
 plan("report:badge").Dependencies = "report:validate";
+plan("report:badge").Outputs = fullfile("public","TestedWith.json");
 
+
+% TASK 5: report:describe (CI-only)
+% Creates a human-readable description for the report tasks and artifacts.
+% This task generates a short text file in public/ describing:
+%   - purpose of the report tasks (validate, badge, link)
+%   - outputs produced (index.html, CrossReleaseTestResults.mat, TestedWith.json)
+%   - deployment target (public/ served via GitHub Pages)
+% The file is useful for maintainers and displays in CI artifact listings.
 plan("report:link") = Task(Actions=@linkResultArtifactPathsInReportIndex);
 plan("report:link").Dependencies = "report:validate";
 
@@ -126,7 +135,7 @@ function createBadge(~)
     if all(result.Passed)
         badge.color = "success";
         badge.message = join("R" + versionLabel, " | ");
-    elseif any(passed)
+    elseif any(Passed)
         badge.color = "yellowgreen";
         badge.message = join("R" + versionLabel(result.Passed), " | ");
     else

@@ -112,7 +112,7 @@ jobs:
       # Upload only files required by buildtool report/pages to reduce artifact size.
       - name: Upload test results artifact
         if: ${{ always() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: test-results-${{ matrix.Releases }}
           path: |
@@ -144,9 +144,9 @@ jobs:
       - name: Download All TestResults
         uses: actions/download-artifact@v8
         with:
-          path: .
+          path: public
           pattern: test-results-*
-          merge-multiple: true
+          merge-multiple: false
           
       # Aggregate test reports and generate badge via buildfile.
       - name: Run buildtool report
@@ -158,7 +158,7 @@ jobs:
       # Upload the badge as artifact
       - name: Upload Badge
         if: ${{ always() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: Badge-Artifact
           path: ./public/TestedWith.json
