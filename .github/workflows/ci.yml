@@ -144,7 +144,7 @@ jobs:
       - name: Download All TestResults
         uses: actions/download-artifact@v8
         with:
-          path: public
+          path: .
           pattern: test-results-*
           merge-multiple: true
           
