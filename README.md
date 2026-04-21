@@ -78,7 +78,7 @@ MATLAB®, Mapping Toolbox™ (optional), Symbolic Math Toolbox™, Simulink®, S
 |      |      |
 | :-- | :-- |
 |  | **In this script, students will...** <br>   |
-| <img src="Images/image_6.png" width="171" alt="image_6.png"> <br>  | $\bullet$ Learn about the concept of head losses in a pipping network. <br> $\bullet$ Model a house plumbing using Simscape fluid. <br> $\bullet$ Explore time\-dependent simulations. <br>   |
+| <img src="Images/image_6.png" width="171" alt="image_6.png"> <br>  | $\bullet$ Learn about the concept of head losses in a piping network. <br> $\bullet$ Model a house plumbing using Simscape fluid. <br> $\bullet$ Explore time\-dependent simulations. <br>   |
 |      |       |
 
 ## [**Ingenuity.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/Ingenuity.mlx)
