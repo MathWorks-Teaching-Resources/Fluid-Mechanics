@@ -76,7 +76,7 @@ jobs:
     strategy: 
       fail-fast: false
       matrix:
-        Releases: [R2025a, R2025b]
+        Releases: [R2025a, R2025b, R2026a]
     runs-on: ubuntu-latest
     env:
       MATLAB_PRODUCTS: Simulink Simscape Symbolic_Math_Toolbox Mapping_Toolbox Simscape_Fluids
