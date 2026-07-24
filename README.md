@@ -23,7 +23,7 @@ Solutions are available upon instructor request. Contact the [MathWorks Educator
 
 ## Prerequisites
 
-These scripts assume knowledge common with basic derivative and integral calculus and common mechanical and thermodynamics concepts such as energy and temperature. There is minimal MATLAB and Simulink knowledge required to complete the module. ManOnTheMoon is the only script that comes with no expected knowledge computing knowledge. It is highly encouraged to complete additional training for the rest of the module, starting with and [Introduction to Symbolic Math with MATLAB](https://matlabacademy.mathworks.com/details/introduction-to-symbolic-math-with-matlab/symbolic). Those interested in additional training should consider completing [Simulink Onramp](https://matlabacademy.mathworks.com/details/simulink-onramp/simulink) & [Simscape Onramp](https://matlabacademy.mathworks.com/details/simscape-onramp/simscape) as a further learning exploration.
+These scripts assume knowledge common with basic derivative and integral calculus and common mechanical and thermodynamics concepts such as energy and temperature. There is minimal MATLAB and Simulink knowledge required to complete the module. ManOnTheMoon is the only script that comes with no expected knowledge computing knowledge. It is highly encouraged to complete additional training for the rest of the module, starting with and [Symbolic Math Onramp](https://matlabacademy.mathworks.com/details/introduction-to-symbolic-math-with-matlab/symbolic). Those interested in additional training should consider completing [Simulink Onramp](https://matlabacademy.mathworks.com/details/simulink-onramp/simulink) & [Simscape Onramp](https://matlabacademy.mathworks.com/details/simscape-onramp/simscape) as a further learning exploration.
 
 ## Getting Started
 
@@ -106,5 +106,5 @@ Or feel free to explore our other [modular courseware content](https://www.mathw
 
 Looking for more? Find an issue? Have a suggestion? Please contact the [MathWorks Educator Content Development Team](mailto:%20onlineteaching@mathworks.com). If you want to contribute directly to this project, you can find information about how to do so in the [CONTRIBUTING.md](https://github.com/MathWorks-Teaching-Resources/Fluid-Mechanics/blob/release/CONTRIBUTING.md) page on GitHub.
 
-Copyright 2025 The MathWorks™, Inc
+Copyright 2026 The MathWorks™, Inc
 
