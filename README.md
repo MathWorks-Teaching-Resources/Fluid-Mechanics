@@ -48,7 +48,7 @@ MATLAB®, Mapping Toolbox™ (optional), Symbolic Math Toolbox™, Simulink®, S
 |      |      |
 | :-- | :-- |
 | | **In this script, students will...** |
-| <img src="Images/Cover-image-for-ManOnTheMoon.png" width="170" alt="Cover image for ManOnTheMoon"> | • Learn about conservation laws. <br> • Apply the control volume method. <br> • Develop theoretical models of a rocket launch. |
+| <img src="Images/image_3.png" width="170" alt="Cover image for ManOnTheMoon"> | • Learn about conservation laws. <br> • Apply the control volume method. <br> • Develop theoretical models of a rocket launch. |
 |      |      |
 ## [**PressureVelocity.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/PressureVelocity.mlx)
 
@@ -62,28 +62,22 @@ MATLAB®, Mapping Toolbox™ (optional), Symbolic Math Toolbox™, Simulink®, S
 |      |      |
 | :-- | :-- |
 | | **In this script, students will...** |
-| <img src="Images/Cover-image-for-carbon-neutral.png" width="170" alt="Cover image for carbon neutral"> | • Learn about energy and power in a fluid system. <br> • Apply the conservation of energy. <br> • Analyze the potential of renewable energy sources. <br> |
+| <img src="Images/image_5.png" width="170" alt="Cover image for carbon neutral"> | • Learn about energy and power in a fluid system. <br> • Apply the conservation of energy. <br> • Analyze the potential of renewable energy sources. <br> |
 |      |      |
 ## [**InternalFlow.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/InternalFlow.mlx)
 
 |      |      |
 | :-- | :-- |
-<<<<<<< HEAD
 | | **In this script, students will...** |
 | <img src="Images/image_6.png" width="170" alt="Cover image for internal flow"> | • Learn about the concept of head losses in a piping network. <br> • Model a house plumbing using Simscape fluid. <br> • Explore time-dependent simulations. |
 |      |      |
-=======
-|  | **In this script, students will...** <br>   |
-| <img src="Images/image_6.png" width="171" alt="image_6.png"> <br>  | $\bullet$ Learn about the concept of head losses in a piping network. <br> $\bullet$ Model a house plumbing using Simscape fluid. <br> $\bullet$ Explore time\-dependent simulations. <br>   |
-|      |       |
 
->>>>>>> 681d6bf1d51c90d86d82f5cad5f64c96c9c4d364
 ## [**Ingenuity.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/Ingenuity.mlx)
 
 |      |      |
 | :-- | :-- |
 | | **In this script, students will...** |
-| <img src="Images/Cover-image-for-Ingenuity.gif" width="170" alt="Cover image for Ingenuity"> | • Learn about the concept of dimensionless numbers. <br> • Explore the design of the Ingenuity copter. <br> • Perform a complete dimensional analysis. |
+| <img src="Images/image_7.gif" width="170" alt="Cover image for Ingenuity"> | • Learn about the concept of dimensionless numbers. <br> • Explore the design of the Ingenuity copter. <br> • Perform a complete dimensional analysis. |
 |      |      |
 ##
 
@@ -93,7 +87,7 @@ MATLAB®, Mapping Toolbox™ (optional), Symbolic Math Toolbox™, Simulink®, S
 
 | | **Available on:** |
 | :-- | :-- |
-| <img src="Images/Cover-image-for-thermodynamic.png" width="170" alt="Cover image for thermodynamic"> | [<img src="Images/image_1.png" width="153" alt="Open in MATLAB Online">](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Thermodynamics&project=Thermodynamics.prj) <br> [<img src="Images/Open-File-Exchange.png" width="108" alt="Open File Exchange">](https://www.mathworks.com/matlabcentral/fileexchange/126784-thermodynamics) |
+| <img src="Images/image_8.png" width="170" alt="Cover image for thermodynamic"> | [<img src="Images/image_1.png" width="153" alt="Open in MATLAB Online">](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Thermodynamics&project=Thermodynamics.prj) <br> [<img src="Images/Open-File-Exchange.png" width="108" alt="Open File Exchange">](https://www.mathworks.com/matlabcentral/fileexchange/126784-thermodynamics) |
 |      |      |
 
 Or feel free to explore our other [modular courseware content](https://www.mathworks.com/matlabcentral/fileexchange/?q=tag%3A%22courseware+module%22&sort=downloads_desc_30d).
