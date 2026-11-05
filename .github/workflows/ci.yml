@@ -17,10 +17,10 @@ name: MATLAB CI and Pages
 #   - SoftwareTests/CrossReleaseTestResults.m : Validates all releases passed (gate for badge)
 #
 # ARTIFACT FLOW:
-#   1. test-matrix job (runs for each MATLAB release R2024b, R2025a, R2025b):
+#   1. test-matrix job (runs for each MATLAB release R2025a, R2025b):
 #      $ buildtool test
-#      -> public/R2024b/CoursewareSmokeTests.mat, FunctionTests.mat, etc.
-#      -> Upload artifacts: test-results-R2024b, test-results-R2025a, test-results-R2025b
+#      -> public/R2025a/CoursewareSmokeTests.mat, FunctionTests.mat, etc.
+#      -> Upload artifacts: test-results-R2025a, test-results-R2025b
 #
 #   2. report-and-deploy job (runs once, after test-matrix completes):
 #      $ Download and merge all test-results-* artifacts into public/
@@ -51,7 +51,7 @@ name: MATLAB CI and Pages
 #     - Ensure SoftwareTests/CrossReleaseTestResults.m can find all release artifacts
 #     - Check public/CrossReleaseTestResults.mat for missing or empty result variables
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   push:
     branches: [ release ]
@@ -73,18 +73,25 @@ concurrency:
 jobs:
   test-matrix:
     name: Test on ${{ matrix.Releases }}
-    strategy: 
+    strategy:
       fail-fast: false
       matrix:
-        Releases: [R2025a, R2025b, R2026a]
+        Releases: [R2026a, R2026b]
     runs-on: ubuntu-latest
     env:
-      MATLAB_PRODUCTS: Simulink Simscape Symbolic_Math_Toolbox Mapping_Toolbox Simscape_Fluids
+      MATLAB_PRODUCTS: # Simulink Simscape Symbolic_Math_Toolbox
+      # List required products above in the format shown (and uncomment them)
+      # Common products:
+      # Simulink
+      # Simscape
+      # Statistics_and_Machine_Learning_Toolbox
+      # Symbolic_Math_Toolbox
+      # Deep_Learning_Toolbox
       LD_PRELOAD: /usr/lib/x86_64-linux-gnu/libstdc++.so.6
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v6
-      
+
       # Sets up a display server
       - name: Start display server
         if: ${{ always() }}
@@ -93,7 +100,7 @@ jobs:
           sudo apt-get install -y xvfb
           Xvfb :99 &
           echo "DISPLAY=:99" >> $GITHUB_ENV
-      
+
       # Sets up MATLAB
       - name: Setup MATLAB ${{ matrix.Releases }}
         uses: matlab-actions/setup-matlab@v3
@@ -125,21 +132,21 @@ jobs:
     if: ${{ always() }}
     needs: [test-matrix]
     runs-on: ubuntu-latest
-    steps: 
+    steps:
 
       # Checks-out your repository
       - uses: actions/checkout@v6
 
       # GitHub-hosted jobs are isolated; MATLAB install from test-matrix cannot be reused here.
       # Keep this setup minimal (no extra products) and use artifacts from matrix jobs.
-      
+
       # Sets latest MATLAB for report task (no toolbox list needed).
       - name: Setup MATLAB latest
         uses: matlab-actions/setup-matlab@v3
         with:
           release: latest
           cache: true
-  
+
       # Download the test results from artifact
       - name: Download All TestResults
         uses: actions/download-artifact@v8
@@ -147,7 +154,7 @@ jobs:
           path: public
           pattern: R20*
           merge-multiple: false
-          
+
       # Aggregate test reports and generate badge via buildfile.
       - name: Run buildtool report
         uses: matlab-actions/run-build@v3
@@ -163,15 +170,17 @@ jobs:
           name: Badge-Artifact
           path: ./public/TestedWith.json
           overwrite: true
-      
+
       # Deploy reports to GitHub pages
       - name: Setup Pages
+        if: ${{ always() && github.event_name != 'pull_request' }}
         uses: actions/configure-pages@v5
       - name: Upload pages artifact
+        if: ${{ always() && github.event_name != 'pull_request' }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
       - name: Deploy to GitHub Pages
+        if: ${{ always() && github.event_name != 'pull_request' }}
         id: deployment
         uses: actions/deploy-pages@v4
-        

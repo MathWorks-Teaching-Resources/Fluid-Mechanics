@@ -63,20 +63,23 @@ classdef CrossReleaseTestResults < matlab.unittest.TestCase
         function verifyAllTestsPassedInArtifact(testCase, ResultArtifactPath)
             testCase.assertNotEqual(ResultArtifactPath, "<NO_RESULT_ARTIFACTS_FOUND>", ...
                 "No per-release result artifacts were found under public/<release>.");
-            
+
             import matlab.buildtool.io.FileCollection
             rootFolder = testCase.Project{1}.RootFolder;
             resultFiles = FileCollection.fromPaths(fullfile(rootFolder, "public", ResultArtifactPath, "*.mat")).paths;
 
-            loadedData = load(resultFiles, "result");
-            testCase.assertTrue(isfield(loadedData, "result"), ...
-                "Missing variable 'result' in artifact: " + ResultArtifactPath);
+            allResults = [];
+            for i = 1:numel(resultFiles)
+                loadedData = load(resultFiles(i), "result");
+                testCase.assertTrue(isfield(loadedData, "result"), ...
+                    "Missing variable 'result' in artifact: " + resultFiles(i));
+                allResults = [allResults, loadedData.result]; %#ok<AGROW>
+            end
 
-            result = loadedData.result;
-            testCase.assertNotEmpty(result, ...
+            testCase.assertNotEmpty(allResults, ...
                 "Result array is empty in artifact: " + ResultArtifactPath);
 
-            passedValues = [result.Passed];
+            passedValues = [allResults.Passed];
             testCase.assertNotEmpty(passedValues, ...
                 "Result.Passed is empty in artifact: " + ResultArtifactPath);
 

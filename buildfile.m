@@ -2,9 +2,9 @@ function plan = buildfile
 % buildfile - MATLAB Build Automation Configuration
 %
 % PURPOSE:
-%   This file defines an automated build plan that orchestrates testing, 
+%   This file defines an automated build plan that orchestrates testing,
 %   validation, and badge generation for the courseware.
-%   It is executed by MATLAB's buildtool command and uses the buildplan 
+%   It is executed by MATLAB's buildtool command and uses the buildplan
 %   object to define a series of tasks.
 %
 % QUICK OVERVIEW:
@@ -118,7 +118,7 @@ plan("clean") = CleanTask;
 end
 
 function createBadge(~)
-    
+
     load(fullfile("public","CrossReleaseTestResults.mat"),"result");
     result = table(result);
     result.Name = string(result.Name);
@@ -135,7 +135,7 @@ function createBadge(~)
     if all(result.Passed)
         badge.color = "success";
         badge.message = join(versionLabel, " | ");
-    elseif any(Passed)
+    elseif any(result.Passed)
         badge.color = "yellowgreen";
         badge.message = join(versionLabel(result.Passed), " | ");
     else
@@ -151,10 +151,10 @@ function linkResultArtifactPathsInReportIndex(~)
 %
 % This function reads a MATLAB-generated test report index HTML file,
 % searches for text tokens like:
-%   ResultArtifactPath=2026a
-%   ResultArtficatPath=2026a   (common typo variant)
+%   ResultArtifactPath=R2026a
+%   ResultArtifactPath=R2025b
 % and wraps each unlinked token in an anchor pointing to:
-%   ./2026a/CoursewareSmokeTests.html
+%   ./R2026a/CoursewareSmokeTests.html
 
 indexFile = fullfile("public", "index.html");
 
@@ -166,11 +166,11 @@ end
 
 html = fileread(indexFile);
 
-% Match both the standard token and the observed typo variant.
+% Match ResultArtifactPath tokens in the HTML report.
 % Example matches:
-%   ResultArtifactPath=2026a
-%   ResultArtifactPath=2027b
-pattern = 'ResultArtifactPath=R(20[0-9][0-9][ab])';
+%   ResultArtifactPath=R2026a
+%   ResultArtifactPath=R2025b
+pattern = 'ResultArtifactPath=(R20[0-9][0-9][ab])';
 [startIdx, endIdx, tokenGroups, tokenMatches] = regexp(html, pattern, 'start', 'end', 'tokens', 'match');
 
 if isempty(startIdx)

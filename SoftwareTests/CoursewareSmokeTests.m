@@ -6,7 +6,7 @@ classdef CoursewareSmokeTests < matlab.unittest.TestCase
     %   corresponding solution scripts in InstructorResources/Solutions.
     %
     % Design:
-    %   1) Discovers .m and .mlx script files in Scripts/ as test parameters.
+    %   1) Discovers .m script files in Scripts/ as test parameters.
     %   2) Executes each learner script and matching solution script.
     %   3) Runs optional per-script pre/post hooks in SoftwareTests/PreFiles
     %      and SoftwareTests/PostFiles.
@@ -32,7 +32,7 @@ classdef CoursewareSmokeTests < matlab.unittest.TestCase
             import matlab.buildtool.io.FileCollection
 
             rootFolder = Project.RootFolder;
-            filePaths = FileCollection.fromPaths(fullfile(rootFolder, "Scripts", ["*.m" "*.mlx"])).paths;
+            filePaths = FileCollection.fromPaths(fullfile(rootFolder, "Scripts", "*.m")).paths;
             [~, fileName, fileExt] = fileparts(filePaths);
             ScriptFile = cellstr(fileName + fileExt);
         end
@@ -162,7 +162,7 @@ classdef CoursewareSmokeTests < matlab.unittest.TestCase
             if ~isfile(preFilePath)
                 writelines("% Pre-run script for " + filename, preFilePath)
                 writelines("% ---- Known Issues -----", preFilePath, 'WriteMode', 'append');
-                writelines("KnownIssuesID = \"\";", preFilePath, 'WriteMode', 'append');
+                writelines("KnownIssuesID = """";", preFilePath, 'WriteMode', 'append');
                 writelines("% ---- Pre-run commands -----", preFilePath, 'WriteMode', 'append');
                 writelines(" ", preFilePath, 'WriteMode', 'append');
             end

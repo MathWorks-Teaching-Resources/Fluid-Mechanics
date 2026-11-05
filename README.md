@@ -1,6 +1,6 @@
 # <span style="color:rgb(213,80,0)">Fluid Mechanics</span>
 
-[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/124840-fluid-mechanics) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=README.mlx)
+[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/124840-fluid-mechanics) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=README.m)
 
 [![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https://mathworks-teaching-resources.github.io/Fluid-Mechanics/TestedWith.json)](https://MathWorks-Teaching-Resources.github.io/Fluid-Mechanics)
 
@@ -27,6 +27,8 @@ These scripts assume knowledge common with basic derivative and integral calculu
 
 ## Getting Started
 
+For MATLAB R2024b or older, download the [legacy MLX version](https://github.com/MathWorks-Teaching-Resources/Fluid-Mechanics/releases/tag/mlx).
+
 ### Accessing the Module
 
 ### **On MATLAB Online:**
@@ -43,28 +45,28 @@ MATLAB®, Mapping Toolbox™ (optional), Symbolic Math Toolbox™, Simulink®, S
 
 # Scripts
 
-## [**ManOnTheMoon.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/ManOnTheMoon.mlx)
+## [**ManOnTheMoon.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/ManOnTheMoon.m)
 
 |      |      |
 | :-- | :-- |
 | | **In this script, students will...** |
 | <img src="Images/image_3.png" width="170" alt="Cover image for ManOnTheMoon"> | • Learn about conservation laws. <br> • Apply the control volume method. <br> • Develop theoretical models of a rocket launch. |
 |      |      |
-## [**PressureVelocity.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/PressureVelocity.mlx)
+## [**PressureVelocity.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/PressureVelocity.m)
 
 |      |      |
 | :-- | :-- |
 | | **In this script, students will...** |
 | <img src="Images/image_4.png" width="170" alt="Cover image for pressurevelocity"> | • Learn about the link between pressure and velocity. <br> • Explore Bernoulli's equation & principle. <br> • Study converging pipe flow, Pitot tube, and lift generation. |
 |      |      |
-## [**CarbonNeutral.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/CarbonNeutral.mlx)
+## [**CarbonNeutral.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/CarbonNeutral.m)
 
 |      |      |
 | :-- | :-- |
 | | **In this script, students will...** |
 | <img src="Images/image_5.png" width="170" alt="Cover image for carbon neutral"> | • Learn about energy and power in a fluid system. <br> • Apply the conservation of energy. <br> • Analyze the potential of renewable energy sources. <br> |
 |      |      |
-## [**InternalFlow.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/InternalFlow.mlx)
+## [**InternalFlow.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/InternalFlow.m)
 
 |      |      |
 | :-- | :-- |
@@ -72,7 +74,7 @@ MATLAB®, Mapping Toolbox™ (optional), Symbolic Math Toolbox™, Simulink®, S
 | <img src="Images/image_6.png" width="170" alt="Cover image for internal flow"> | • Learn about the concept of head losses in a piping network. <br> • Model a house plumbing using Simscape fluid. <br> • Explore time-dependent simulations. |
 |      |      |
 
-## [**Ingenuity.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/Ingenuity.mlx)
+## [**Ingenuity.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fluid-Mechanics&project=fluid-mechanics.prj&file=Scripts/Ingenuity.m)
 
 |      |      |
 | :-- | :-- |
