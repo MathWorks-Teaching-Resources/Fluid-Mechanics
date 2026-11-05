@@ -79,7 +79,7 @@ jobs:
         Releases: [R2026a, R2026b]
     runs-on: ubuntu-latest
     env:
-      MATLAB_PRODUCTS: Simulink Simscape Symbolic_Math_Toolbox Mapping_Toolbox Simscape_Fluids# Simulink Simscape Symbolic_Math_Toolbox
+      MATLAB_PRODUCTS: Simulink Simscape Symbolic_Math_Toolbox Mapping_Toolbox Simscape_Fluids Simulink Simscape Symbolic_Math_Toolbox
       LD_PRELOAD: /usr/lib/x86_64-linux-gnu/libstdc++.so.6
     steps:
       # Checks-out your repository
