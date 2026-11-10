@@ -1,6 +1,6 @@
 %[text] %[text:anchor:T_288EC79D] # Internal Flow
-%[text] [⇦ Return to the main menu](file:..\\..\\MainMenu.m)
-%[text] Internal flow is crucial for engineering as it involves the study of fluid in an enclosed system, such as pipes and ducts. Understanding internal flow is necessary for designing an efficient and effective transportation, ventilation, and heating system. In [PressureVelocitySoln.m](file:.\\PressureVelocitySoln.m) we introduced Bernoulli's equation for ideal flow. In this script, we will learn how to model internal fluid flow using Bernoulli's equation for non-ideal flow, including pressure loss due to friction.
+%[text] [⇦ Return to the main menu](file:../../MainMenu.m)
+%[text] Internal flow is crucial for engineering as it involves the study of fluid in an enclosed system, such as pipes and ducts. Understanding internal flow is necessary for designing an efficient and effective transportation, ventilation, and heating system. In [PressureVelocitySoln.m](file:./PressureVelocitySoln.m) we introduced Bernoulli's equation for ideal flow. In this script, we will learn how to model internal fluid flow using Bernoulli's equation for non-ideal flow, including pressure loss due to friction.
 %[text] 
 %[text]{"align":"center"} ![Cover image house plumbing](text:image:87f4)
 %[text]{"align":"center"} 
@@ -13,7 +13,7 @@
 %[text] The ![Try this icon](text:image:3795)  and  ![Exercise icon](text:image:3f16) icons refer to two different types of interactive activities that you will find in this script. The ![Try this icon](text:image:084f)  usually indicates an interaction where you will explore the visualization of some concept introduced in this script. The ![Exercise icon](text:image:7067) interactions are designed to challenge your understaning of those concepts and may be used for grading and completion checks by your professor.
 %%
 %[text] %[text:anchor:H_FBD061C4] ## Ideal vs. non-ideal internal flow
-%[text] In [PressureVelocitySoln.m](file:.\\PressureVelocitySoln.m), we introduced Bernoulli's equation:
+%[text] In [PressureVelocitySoln.m](file:./PressureVelocitySoln.m), we introduced Bernoulli's equation:
 %[text]{"align":"center"} $\\frac{P}{\\rho g} + \\frac{v^2}{2 g} + z = H\_0=\\text{Constant}\n\\qquad\n(\\text{Head-loss form})${"altText":"\frac{P}{\rho g} + \frac{v^2}{2 g} + z = H\_0=\text{Constant} \qquad (\text{Head-loss form})"}
 %[text]{"align":"center"} $P+\n\\frac{1}{2}\\rho v^2+\n\\rho g z= \\text{Constant} \n\\qquad\n(\\text{Pressure form})${"altText":"P+ \frac{1}{2}\rho v^2+ \rho g z= \text{Constant}  \qquad (\text{Pressure form})"}
 %[text] This relation states that the fluid’s total pressure or energy is conserved along a streamline. This is an idealistic view of fluid flow, and particularly for internal flow, the energy needs to be conserved. Take the example of a house with its plumbing; the energy of the water flowing through the pipe is not entirely conserved from the time it enters the house through the main water intake to the time it leaves the house to the sewer system. For example, in every pipe, the friction of water against the pipe wall dissipates energy and reduces the pressure. Moreover, every elbow, change in diameter, valve, opening, etc., is also associated with energy dissipation. This dissipation of energy is usually referred to as head loss.
@@ -136,7 +136,7 @@ open("House_Mdl4.slx")
 %[text] - Make the network more complex by adding more fixtures, such as a sink and toilet.
 %[text] - Play with the dimension of the pipe. \
 %[text] 
-%[text] [⇦ Return to the main menu](file:..\\..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../../MainMenu.m)
 %%
 %[text] ## Help us Improve
 %[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
@@ -336,7 +336,7 @@ function CheckMassFlowWasher(AnswerA, AnswerB)
     end
 end
 %[text] 
-%[text] [⇦ Return to the main menu](file:..\\..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../../MainMenu.m)
 %[text] 
 %[text] Copyright 2023-2026 The MathWorks™, Inc
 

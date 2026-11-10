@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_75128C09] # Carbon Neutral
-%[text] [⇦ Return to the main menu](file:..\\..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../../MainMenu.m)
 %[text] The challenge of climate change encourages companies, such as MathWorks, to commit themselves to becoming carbon neutral. This effort leads to using renewable energy to power the company's facility. In this script, we will explore two sources of renewable energy: hydropower and wind turbines. We will apply the conservation of mass, momentum, and energy to understand how these renewable energy sources work and how much power they can generate.
 %[text] 
 %[text]{"align":"center"} ![Picture Hoover dam](text:image:0e3e)
@@ -87,7 +87,7 @@ TotalElectricalComsumption = TotalElectricalComsumption * ElectricalConsumptonUn
 %%
 %[text] %[text:anchor:H_9A399D8B] ### **Control Volume Method**
 %[text] 
-%[text] This section applies the [control volume method](file:.\\ManOnTheMoonSoln.m) to the wind turbine. We are considering the control volume to include all the streamlines of fluid going through the turbine from the upstream disk A to the downstream disk B introduced in the [previous figure](internal:M_EE0871FD).
+%[text] This section applies the [control volume method](file:./ManOnTheMoonSoln.m) to the wind turbine. We are considering the control volume to include all the streamlines of fluid going through the turbine from the upstream disk A to the downstream disk B introduced in the [previous figure](internal:M_EE0871FD).
 %[text] 
 %[text] %[text:anchor:H_FA177D1E] #### **Mass Conservation**
 %[text] 
@@ -413,7 +413,7 @@ DamCoverage = EnergyDam / TotalElectricalComsumption
 %[text] - [Solar cell](https://www.mathworks.com/help/releases/R2023a/sps/ug/solar-cell-power-curve.html)
 %[text] - [Wind turbine](https://www.mathworks.com/help/releases/R2023a/sps/ug/wind-turbine.html) \
 %[text] 
-%[text] [⇦ Return to the main menu](file:..\\..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../../MainMenu.m)
 %%
 %[text] ## Help us Improve
 %[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
@@ -717,7 +717,7 @@ function CheckPowerExtractedTurbine(Answer1,Answer2)
     end
 end
 %[text] 
-%[text] [⇦ Return to the main menu](file:..\\..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../../MainMenu.m)
 %[text] 
 %[text] Copyright 2023-2026 The MathWorks™, Inc
 

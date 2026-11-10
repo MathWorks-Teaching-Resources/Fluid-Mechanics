@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_0E87ADB8] # Man On The Moon
-%[text] [⇦ Return to the main menu](file:..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../MainMenu.m)
 %[text] Conservation of Mass and Momentum are the fundamental equations of fluid dynamics. This script investigates their application to the modeling of the launch of one of the most famous space exploration missions, comparing the results to the actual flight log from the mission.
 %[text] 
 %[text]{"align":"center"} ![decorative](text:image:2200)
@@ -305,7 +305,7 @@ end
 %[text] %[text:anchor:H_F797CACB] ## Reference
 %[text] All the flight data from NASA were extracted from the following report:
 %[text] - *Saturn 5 launch vehicle flight evaluation report-AS-509 apollo 14 mission*. [MPR-SAT-FE-71-1](https://ntrs.nasa.gov/citations/19730025091), 1971. \
-%[text] [⇦ Return to the main menu](file:..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../MainMenu.m)
 %%
 %[text] ## Help us Improve
 %[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
@@ -316,7 +316,7 @@ end
 %[text] %[text:anchor:H_1E6E8C49] ### 
 %[text] %[text:anchor:H_7A8B4E3F] ### Plotting Function
 %[text] 
-%[text] ![Function Icon](text:image:3084)**`DrawSaturn(opts):`** more information can be found about this plotting function directly in its [definition file](<matlab: edit("FunctionLibrary"+filesep+"DrawSaturn.m")>) or by running the following command in your Command Window
+%[text] ![Function Icon](text:image:3084)**`DrawSaturn(opts):`** more information can be found about this plotting function directly in its [definition file](file:../FunctionLibrary/DrawSaturn.m) or by running the following command in your Command Window
 %[text] ```matlabCodeExample
 %[text] doc DrawSaturn
 %[text] ```
@@ -976,7 +976,7 @@ function qTrigFunction(int)
 end
 %[text] [⇦ Return to function uses in the script](internal:M_90F0B75A)
 %[text] 
-%[text] [⇦ Return to the main menu](file:..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../MainMenu.m)
 %[text] 
 %[text] Copyright 2023-2026 The MathWorks™, Inc
 

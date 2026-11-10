@@ -1,31 +1,31 @@
 %[text] %[text:anchor:T_DEF03274] # Fluid Mechanics
 %[text:tableOfContents]{"heading":"Table of Contents"}
 %[text] %[text:anchor:H_E8C62B23] ## Scripts
-%[text] ### [ManOnTheMoon.m](file:.\\Scripts\\ManOnTheMoon.m)
+%[text] ### [ManOnTheMoon.m](file:./Scripts/ManOnTheMoon.m)
 %[text:table]{"ignoreHeader":true}
 %[text] |  | **In this script, students will...** |
 %[text] | --- | --- |
 %[text] | ![Cover image for ManOnTheMoon](text:image:65b5) | <p>$\\bullet${"altText":"\bullet"} Learn about conservation laws.</p><p>$\\bullet${"altText":"\bullet"} Apply the control volume method.</p><p>$\\bullet${"altText":"\bullet"} Develop theoretical models of a rocket launch.</p> |
 %[text:table]
-%[text] ### [PressureVelocity.m](file:.\\Scripts\\PressureVelocity.m)
+%[text] ### [PressureVelocity.m](file:./Scripts/PressureVelocity.m)
 %[text:table]{"ignoreHeader":true}
 %[text] |  | **In this script, students will...** |
 %[text] | --- | --- |
 %[text] | ![Cover image for pressurevelocity](text:image:8436) | <p>$\\bullet${"altText":"\bullet"} Learn about the link between pressure and velocity.</p><p>$\\bullet${"altText":"\bullet"} Explore Bernoulli's equation & principle.</p><p>$\\bullet${"altText":"\bullet"} Study converging pipe flow, Pitot tube, and lift generation.</p> |
 %[text:table]
-%[text] ### [CarbonNeutral.m](file:.\\Scripts\\CarbonNeutral.m)
+%[text] ### [CarbonNeutral.m](file:./Scripts/CarbonNeutral.m)
 %[text:table]{"ignoreHeader":true}
 %[text] |  | **In this script, students will...** |
 %[text] | --- | --- |
 %[text] | ![Cover image for carbon neutral](text:image:6857) | <p>$\\bullet${"altText":"\bullet"} Learn about energy and power in a fluid system.</p><p>$\\bullet${"altText":"\bullet"} Apply the conservation of energy.</p><p>$\\bullet${"altText":"\bullet"} Analyze the potential of renewable energy sources.</p><p></p> |
 %[text:table]
-%[text] ### [InternalFlow.m](file:.\\Scripts\\InternalFlow.m)
+%[text] ### [InternalFlow.m](file:./Scripts/InternalFlow.m)
 %[text:table]{"ignoreHeader":true}
 %[text] |  | **In this script, students will...** |
 %[text] | --- | --- |
 %[text] | ![Cover image for internal flow](text:image:77aa) | <p>$\\bullet${"altText":"\bullet"} Learn about the concept of head losses in a piping network.</p><p>$\\bullet${"altText":"\bullet"} Model a house plumbing using Simscape fluid.</p><p>$\\bullet${"altText":"\bullet"} Explore time-dependent simulations.</p> |
 %[text:table]
-%[text] ### [Ingenuity.m](file:.\\Scripts\\Ingenuity.m)
+%[text] ### [Ingenuity.m](file:./Scripts/Ingenuity.m)
 %[text:table]{"ignoreHeader":true}
 %[text] |  | **In this script, students will...** |
 %[text] | --- | --- |
@@ -49,7 +49,7 @@
 %[text] - [Educator Page](https://www.mathworks.com/academia/educators.html) \
 %[text] Are you looking for more? Find an issue? Have a suggestion? Please get in touch with the [MathWorks teaching resources team ](mailto:%20onlineteaching@mathworks.com).
 %[text] 
-%[text] %[text:anchor:H_F10FBF7B] ## [README](file:.\\README.m)
+%[text] %[text:anchor:H_F10FBF7B] ## [README](file:./README.m)
 %[text] 
 %[text] Copyright 2026 The MathWorks™, Inc
 

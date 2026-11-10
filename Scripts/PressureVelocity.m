@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_288EC79D] # Pressure & Velocity
-%[text] [⇦ Return to the main menu](file:..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../MainMenu.m)
 %[text] 
 %[text] In fluid dynamics, understanding the links between pressure, velocity, energy, and power is essential because they are the driving mechanisms of fluid flow.
 %[text] 
@@ -287,9 +287,9 @@ CheckPressureDifferenceSign("None") %[control:dropdown:0112]{"position":[29,35]}
 %%
 %[text] %[text:anchor:H_7ED8B157] ## Further Exploration
 %[text] 
-%[text] - In this script, we only considered ideal flow where the total pressure is conserved along streamline. In all real flow, friction introduces pressure drop. Therefore, the total pressure decreases along a streamline. These pressure losses, often called head losses, can be modeled. Explore [InternalFlow.m](file:.\\InternalFlow.m) to learn more about realistic flow applied to house plumbing. \
+%[text] - In this script, we only considered ideal flow where the total pressure is conserved along streamline. In all real flow, friction introduces pressure drop. Therefore, the total pressure decreases along a streamline. These pressure losses, often called head losses, can be modeled. Explore [InternalFlow.m](file:./InternalFlow.m) to learn more about realistic flow applied to house plumbing. \
 %[text] 
-%[text] [⇦ Return to the main menu](file:..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../MainMenu.m)
 %%
 %[text] ## Help us Improve
 %[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
@@ -715,7 +715,7 @@ function cbIdentifyPressure(src,~,code)
     end
 end
 %[text] 
-%[text] [⇦ Return to the main menu](file:..\\MainMenu.m)
+%[text] [⇦ Return to the main menu](file:../MainMenu.m)
 %[text] 
 %[text] Copyright 2023-2026 The MathWorks™, Inc
 
